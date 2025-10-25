@@ -29,12 +29,12 @@ prototipo-portfolio/
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **HTML5** - Estructura semántica
+- **HTML5** 
 - **CSS3** - Estilos modernos
   - Grid & Flexbox
   - Gradientes
   - Animaciones
 - **JavaScript** - Efectos interactivos
-- **Git & GitHub Pages** - Control de versiones y despliegue
+- **Git & GitHub Pages** 
 
 

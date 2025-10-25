@@ -14,7 +14,7 @@ prototipo-portfolio/
 ├── index.html              # Página principal
 ├── estilos.css             # Estilos principales
 ├── bubbles.js              # Animación de burbujas para proyectos
-└── assets/                 # Recursos (opcional)
+└── assets/                 # Recursos 
     └──                     # Archivo de CV para descargar
                  
 ```

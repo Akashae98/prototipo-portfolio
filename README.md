@@ -1,4 +1,4 @@
-# 💼 Mi Portfolio Personal
+# 💼 My Portfolio 
 
 Este es un prototipo de portfolio personal donde muestro mis proyectos y habilidades.
 

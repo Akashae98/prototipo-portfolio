@@ -151,12 +151,16 @@ li {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
-.skill-group h3 {
+.h3-skill-group {
     margin: 0 0 8px;
     font-size: 1rem;
-    color: #1f2937;
 }
-
+h3.technic{
+    color: rgb(125, 231, 169);
+}
+h3.soft{
+    color: rgb(250, 166, 166);
+}
 /* Badges generales */
 .badges {
     display: flex;
@@ -313,8 +317,8 @@ li {
 /* Contacto */
 #contacto .grid {
     display: grid;
-    /*ajusta 4 columanas iguales de ancho que se expanden en el espacio disponible*/
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 #contacto .card {
@@ -327,12 +331,18 @@ li {
     margin-bottom: 10px;
 }
 
-contact-buttons {
-    text-align: center;
-    margin-top: 30px;
+/* Ajustes para móviles*/
+@media (max-width: 480px) {
+    #contacto .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .icon {
+        font-size: 1.5rem;
+    }
 }
 
-/* CORRECCIÓN: selector con punto y centrado con flex */
+/* Contenedor de botones de contacto */
 .contact-buttons {
     display: flex;
     justify-content: center; /* centra horizontalmente */

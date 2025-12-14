@@ -6,6 +6,9 @@ Este es un prototipo de portfolio personal donde muestro mis proyectos y habilid
 
 Puedes verlo en funcionamiento aquí: [https://akashae98.github.io/prototipo-portfolio/](https://akashae98.github.io/prototipo-portfolio/)
 
+<img width="1330" height="894" alt="image" src="https://github.com/user-attachments/assets/5a1568a2-559f-42ae-8807-3cdb7d8508bd" />
+
+
 
 ## 📁 Estructura
 

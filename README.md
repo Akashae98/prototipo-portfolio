@@ -1,41 +1,34 @@
-# 💼 My Portfolio 
+# Portfolio | Carolina Vilar Rodenas
 
-Este es un prototipo de portfolio personal donde muestro mis proyectos y habilidades.
+Portfolio personal redisenado como experiencia futurista, minimalista y profesional para recruiters tech.
 
-## 🚀 Demo en Vivo
+## Stack
 
-Puedes verlo en funcionamiento aquí: [https://akashae98.github.io/prototipo-portfolio/](https://akashae98.github.io/prototipo-portfolio/)
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Canvas 2D para la pecera cuantica ambiental
 
-<img width="1330" height="894" alt="image" src="https://github.com/user-attachments/assets/5a1568a2-559f-42ae-8807-3cdb7d8508bd" />
+## Scripts
 
-
-
-## 📁 Estructura
-
-```
-prototipo-portfolio/
-├── index.html              # Página principal
-├── estilos.css             # Estilos principales
-├── bubbles.js              # Animación de burbujas
-└── assets/              
-    └──                     # Archivo de CV para descargar
-                 
+```bash
+npm.cmd install
+npm.cmd run dev
+npm.cmd run build
 ```
 
-## ✨ Características
-- 🎨 Diseño moderno y responsive
-- 📱 Compatible con dispositivos móviles
-- 🫧 Animación de burbujas en tarjeta de proyecto
-- 🌈 Diseño con gradientes 
-  
+## Estructura
 
-## 🛠️ Tecnologías
+```text
+app/                         Layout, estilos globales y pagina principal
+components/sections/          Hero, About, Skills, Projects, Experience, Contact
+components/quantum-aquarium/  Canvas ambiental de la pecera cuantica
+components/ui/                Componentes reutilizables
+data/profile.ts               Contenido editable del portfolio
+public/assets/                Ilustracion hero y CV descargable
+```
 
-- **HTML5** 
-- **CSS3**
-  - Grid & Flexbox
-  - Gradientes
-  - Animaciones
-- **JavaScript** 
+## Direccion
 
-
+El diseno combina cyberpunk minimalista, glassmorphism oscuro, UI sci-fi sobria y contenido claro. La pecera cuantica es secundaria y acompana la navegacion sin competir con proyectos ni copy.

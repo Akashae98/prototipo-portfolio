@@ -38,6 +38,13 @@ export function QuantumAquarium() {
     const ctx = context;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isSmallViewport = window.innerWidth < 900;
+
+    if (reducedMotion || isSmallViewport) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      return;
+    }
+
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const particles: Particle[] = [];
     const trail: TrailPoint[] = [];
@@ -55,7 +62,7 @@ export function QuantumAquarium() {
     let last = performance.now();
     let hoverTarget: { x: number; y: number } | null = null;
 
-    const particleCount = reducedMotion ? 16 : 42;
+    const particleCount = 24;
 
     function resize() {
       width = window.innerWidth;
@@ -101,21 +108,21 @@ export function QuantumAquarium() {
       fish.y += dy * (reducedMotion ? 0.018 : 0.035);
       fish.angle = Math.atan2(dy, dx);
 
-      if (!reducedMotion && trail.length < 28) {
+      if (!reducedMotion && trail.length < 18) {
         trail.push({ x: fish.x, y: fish.y, age: 0 });
       }
 
       for (let i = trail.length - 1; i >= 0; i -= 1) {
         const point = trail[i];
         point.age += 1;
-        const alpha = Math.max(0, 0.22 - point.age * 0.009);
+        const alpha = Math.max(0, 0.13 - point.age * 0.008);
         if (alpha <= 0) {
           trail.splice(i, 1);
           continue;
         }
         ctx.beginPath();
         ctx.fillStyle = `rgba(96, 165, 250, ${alpha})`;
-        ctx.arc(point.x, point.y, 2.2, 0, Math.PI * 2);
+        ctx.arc(point.x, point.y, 1.7, 0, Math.PI * 2);
         ctx.fill();
       }
 
@@ -123,13 +130,13 @@ export function QuantumAquarium() {
       ctx.save();
       ctx.translate(fish.x, fish.y);
       ctx.rotate(fish.angle);
-      ctx.shadowColor = "rgba(96, 165, 250, 0.7)";
-      ctx.shadowBlur = 18;
+      ctx.shadowColor = "rgba(96, 165, 250, 0.42)";
+      ctx.shadowBlur = 10;
 
       const gradient = ctx.createLinearGradient(-18, 0, 22, 0);
-      gradient.addColorStop(0, "rgba(216, 180, 254, 0.36)");
-      gradient.addColorStop(0.52, "rgba(96, 165, 250, 0.74)");
-      gradient.addColorStop(1, "rgba(245, 245, 245, 0.84)");
+      gradient.addColorStop(0, "rgba(216, 180, 254, 0.26)");
+      gradient.addColorStop(0.52, "rgba(96, 165, 250, 0.58)");
+      gradient.addColorStop(1, "rgba(245, 245, 245, 0.74)");
 
       ctx.beginPath();
       ctx.ellipse(0, 0, 18 + pulse, 7, 0, 0, Math.PI * 2);
@@ -142,7 +149,7 @@ export function QuantumAquarium() {
       ctx.lineTo(-27, 0);
       ctx.lineTo(-31, 9);
       ctx.closePath();
-      ctx.fillStyle = "rgba(216, 180, 254, 0.42)";
+      ctx.fillStyle = "rgba(216, 180, 254, 0.3)";
       ctx.fill();
 
       ctx.beginPath();
@@ -174,12 +181,12 @@ export function QuantumAquarium() {
         if (particle.x > width + 10) particle.x = -10;
 
         ctx.beginPath();
-        ctx.fillStyle = `rgba(216, 180, 254, ${particle.alpha})`;
+        ctx.fillStyle = `rgba(216, 180, 254, ${particle.alpha * 0.72})`;
         ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
         ctx.fill();
       }
 
-      ctx.strokeStyle = "rgba(96, 165, 250, 0.08)";
+      ctx.strokeStyle = "rgba(96, 165, 250, 0.04)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.arc(fish.x, fish.y, 48 + Math.sin(time * 0.002) * 6, 0, Math.PI * 2);
@@ -229,7 +236,7 @@ export function QuantumAquarium() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-[1] opacity-55 mix-blend-screen"
+      className="pointer-events-none fixed inset-0 z-[1] opacity-28 mix-blend-screen"
     />
   );
 }

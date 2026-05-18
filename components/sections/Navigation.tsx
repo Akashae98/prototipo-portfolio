@@ -1,10 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Github, Linkedin } from "lucide-react";
-import { navigation, profile } from "@/data/profile";
+import type { PortfolioContent } from "@/data/profile";
+import type { Locale } from "@/lib/i18n";
 
-export function Navigation() {
+type NavigationProps = {
+  locale: Locale;
+  ui: PortfolioContent["ui"];
+  navigation: PortfolioContent["navigation"];
+  profile: PortfolioContent["profile"];
+};
+
+export function Navigation({ locale, ui, navigation, profile }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,25 +49,48 @@ export function Navigation() {
             </a>
           ))}
         </div>
-        <div className="hidden items-center gap-2 sm:flex">
-          <a
-            aria-label="GitHub"
-            className="focus-ring rounded-full border border-white/10 bg-white/[0.035] p-2 text-white/65 transition hover:border-violetCore/50 hover:text-white"
-            href={profile.github}
-            rel="noreferrer"
-            target="_blank"
+        <div className="flex items-center gap-2">
+          <div
+            aria-label={ui.localeSwitcherLabel}
+            className="flex items-center rounded-full border border-white/10 bg-white/[0.035] p-1 text-xs font-medium backdrop-blur-xl"
           >
-            <Github size={18} />
-          </a>
-          <a
-            aria-label="LinkedIn"
-            className="focus-ring rounded-full border border-white/10 bg-white/[0.035] p-2 text-white/65 transition hover:border-signalBlue/50 hover:text-white"
-            href={profile.linkedin}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Linkedin size={18} />
-          </a>
+            <Link
+              href="/en"
+              className={`focus-ring rounded-full px-3 py-2 transition ${
+                locale === "en" ? "bg-white/10 text-white" : "text-white/55 hover:text-white"
+              }`}
+            >
+              EN
+            </Link>
+            <Link
+              href="/es"
+              className={`focus-ring rounded-full px-3 py-2 transition ${
+                locale === "es" ? "bg-white/10 text-white" : "text-white/55 hover:text-white"
+              }`}
+            >
+              ES
+            </Link>
+          </div>
+          <div className="hidden items-center gap-2 sm:flex">
+            <a
+              aria-label="GitHub"
+              className="focus-ring rounded-full border border-white/10 bg-white/[0.035] p-2 text-white/65 transition hover:border-violetCore/50 hover:text-white"
+              href={profile.github}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Github size={18} />
+            </a>
+            <a
+              aria-label="LinkedIn"
+              className="focus-ring rounded-full border border-white/10 bg-white/[0.035] p-2 text-white/65 transition hover:border-signalBlue/50 hover:text-white"
+              href={profile.linkedin}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Linkedin size={18} />
+            </a>
+          </div>
         </div>
       </nav>
     </header>

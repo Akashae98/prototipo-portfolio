@@ -6,9 +6,9 @@ type ButtonLinkProps = ComponentPropsWithoutRef<"a"> & {
 
 const variants = {
   primary:
-    "border-violetCore/50 bg-violetCore/18 text-bone shadow-glow hover:border-violetCore hover:bg-violetCore/28",
+    "border-violetCore/42 bg-violetCore/16 text-bone shadow-glow hover:border-violetCore hover:bg-violetCore/24",
   secondary:
-    "border-signalBlue/45 bg-signalBlue/12 text-bone shadow-blueGlow hover:border-signalBlue hover:bg-signalBlue/22",
+    "border-signalBlue/40 bg-signalBlue/10 text-bone shadow-blueGlow hover:border-signalBlue hover:bg-signalBlue/18",
   ghost:
     "border-white/10 bg-white/[0.03] text-white/75 hover:border-white/24 hover:text-white"
 };
@@ -21,7 +21,7 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   return (
     <a
-      className={`focus-ring inline-flex min-h-11 items-center justify-center gap-2 border px-5 py-3 text-sm font-semibold transition duration-300 ${variants[variant]} ${className}`}
+      className={`focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-[1rem] border px-5 py-3 text-sm font-semibold tracking-[0.01em] transition duration-300 ${variants[variant]} ${className}`}
       {...props}
     >
       {children}

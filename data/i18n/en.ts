@@ -219,26 +219,95 @@ export const en: PortfolioContent = {
         "Built as a responsive single-page experience with refined motion."
       ],
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      linkMode: "in-progress",
-      status: "Current Build",
-      statusDetail: "Codebase in active refinement",
+      linkMode: "live-demo",
+      status: "Vercel deploy",
+      statusDetail: "Public build available",
       media: {
-        poster: "/assets/hero-carolina.png",
-        posterAlt: "Structured preview of the portfolio layout and section system.",
+        poster: "/assets/portfolio-screenshot.png",
+        posterAlt: "Screenshot of Carol Vilar's personal portfolio hero section.",
         detailPanel: {
-          title: "App structure",
+          title: "Portfolio system",
           items: [
             "Next.js App Router",
             "Typed content model and reusable sections",
             "Content-first layout with restrained motion"
           ],
           note: "Built to keep the interface readable, structured, and easy to evolve as the project grows."
-        }
+        },
+        frames: [
+          {
+            src: "/assets/portfolio-screenshot.png",
+            alt: "Main portfolio view with the hero section and dark visual system.",
+            objectPosition: "center center",
+            label: "Main view"
+          }
+        ]
       },
       actions: [
         {
           label: "GitHub",
           href: "https://github.com/Akashae98/prototipo-portfolio",
+          variant: "ghost",
+          external: true,
+          iconKey: "github"
+        },
+        {
+          label: "View build",
+          href: "https://prototipo-portfolio-rho.vercel.app/en",
+          variant: "secondary",
+          external: true,
+          iconKey: "external"
+        }
+      ]
+    },
+    {
+      title: "DevConnect",
+      type: "Final course project",
+      description:
+        "Social network for the IT sector developed as a DAW final project, with an Angular frontend and Laravel backend.",
+      highlight:
+        "The project focuses on building a complete Full-Stack application with a clear separation between client and server, designed around profiles, community, and connections between tech professionals.",
+      bullets: [
+        "Developed the frontend with Angular and TypeScript.",
+        "Used RxJS and interceptors to manage flows and API communication.",
+        "Built the backend with Laravel.",
+        "Built as an SPA with a PostgreSQL database."
+      ],
+      tags: ["Angular", "RxJS", "Laravel", "PostgreSQL", "SPA"],
+      linkMode: "in-progress",
+      status: "DAW final project",
+      statusDetail: "Frontend available on GitHub",
+      media: {
+        poster: "/assets/devconnect-login.png",
+        posterAlt: "DevConnect landing screen with hero copy, call to action, and login form.",
+        detailPanel: {
+          title: "Full-Stack architecture",
+          items: [
+            "Angular SPA",
+            "RxJS and interceptors",
+            "Laravel and PostgreSQL"
+          ],
+          note: "Final course project focused on connecting tech profiles through a layered web application."
+        },
+        frames: [
+          {
+            src: "/assets/devconnect-login.png",
+            alt: "DevConnect login screen with hero section and access form.",
+            objectPosition: "center center",
+            label: "Hero and login"
+          },
+          {
+            src: "/assets/devconnect-feed.png",
+            alt: "Main DevConnect feed with posts and side panels.",
+            objectPosition: "center top",
+            label: "Main feed"
+          }
+        ]
+      },
+      actions: [
+        {
+          label: "GitHub",
+          href: "https://github.com/jesusdev98/DevConnect-Frontend",
           variant: "ghost",
           external: true,
           iconKey: "github"

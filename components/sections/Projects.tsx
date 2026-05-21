@@ -100,7 +100,7 @@ function ProjectMediaBlock({
   project: PortfolioContent["projects"][number];
   highlighted: boolean;
 }) {
-  if (project.linkMode === "in-progress" && project.media.detailPanel) {
+  if (project.linkMode === "in-progress" && project.media.detailPanel && !project.media.frames) {
     return <PortfolioStructurePreview project={project} />;
   }
 
@@ -158,6 +158,69 @@ function ProjectMediaBlock({
               </p>
             </div>
           ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (project.media.frames && project.media.detailPanel) {
+    const isDevConnect = project.title === "DevConnect";
+
+    return (
+      <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0a0d16]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(139,92,246,0.14),transparent_36%)]" />
+        <div className="absolute inset-[1px] rounded-[1.55rem] border border-white/6" />
+        <div className="relative p-4 md:p-5">
+          <div className="relative aspect-[16/8.6] overflow-hidden rounded-[1.3rem] border border-white/10 bg-black/20">
+            <Image
+              src={project.media.poster}
+              alt={project.media.posterAlt}
+              fill
+              sizes="(min-width: 1024px) 520px, 100vw"
+              className={`object-cover ${isDevConnect ? "scale-[1.08]" : ""}`}
+              style={{ objectPosition: isDevConnect ? "center 46%" : "center center" }}
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,17,0.03),rgba(8,10,17,0.18))]" />
+          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            {project.media.detailPanel.items.slice(0, 3).map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-white/62"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {project.media.frames.slice(1).map((frame) => (
+              <div
+                key={frame.label}
+                className="rounded-2xl border border-white/10 bg-white/[0.035] p-2"
+              >
+                <div className="relative h-24 overflow-hidden rounded-xl border border-white/8">
+                  <Image
+                    src={frame.src}
+                    alt={frame.alt}
+                    fill
+                    sizes="260px"
+                    className="object-cover"
+                    style={{ objectPosition: frame.objectPosition ?? "center center" }}
+                  />
+                </div>
+                <p className="mt-2 text-[0.64rem] uppercase tracking-[0.12em] text-white/52">
+                  {frame.label}
+                </p>
+              </div>
+            ))}
+            {project.media.frames.length > 1 && project.media.detailPanel.note ? (
+                <div
+                  className="rounded-2xl border border-violetCore/18 bg-violetCore/[0.07] px-4 py-3 text-sm leading-6 text-white/64"
+                >
+                  {project.media.detailPanel.note}
+                </div>
+              ) : null}
+          </div>
         </div>
       </div>
     );

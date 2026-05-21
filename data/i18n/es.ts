@@ -219,26 +219,95 @@ export const es: PortfolioContent = {
         "Construido como una experiencia responsive con motion refinado."
       ],
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      linkMode: "in-progress",
-      status: "Build actual",
-      statusDetail: "Codebase en refinamiento activo",
+      linkMode: "live-demo",
+      status: "Deploy en Vercel",
+      statusDetail: "Build pública disponible",
       media: {
-        poster: "/assets/hero-carolina.png",
-        posterAlt: "Preview estructural del layout y del sistema de secciones del portfolio.",
+        poster: "/assets/portfolio-screenshot.png",
+        posterAlt: "Captura de la hero del portfolio personal de Carol Vilar.",
         detailPanel: {
-          title: "Estructura de la app",
+          title: "Sistema del portfolio",
           items: [
             "Next.js App Router",
             "Modelo de contenido tipado y secciones reutilizables",
             "Layout centrado en contenido con movimiento contenido"
           ],
           note: "Construido para mantener la interfaz legible, estructurada y fácil de evolucionar."
-        }
+        },
+        frames: [
+          {
+            src: "/assets/portfolio-screenshot.png",
+            alt: "Vista principal del portfolio con la hero y el sistema visual oscuro.",
+            objectPosition: "center center",
+            label: "Vista principal"
+          }
+        ]
       },
       actions: [
         {
           label: "GitHub",
           href: "https://github.com/Akashae98/prototipo-portfolio",
+          variant: "ghost",
+          external: true,
+          iconKey: "github"
+        },
+        {
+          label: "Ver build",
+          href: "https://prototipo-portfolio-rho.vercel.app/en",
+          variant: "secondary",
+          external: true,
+          iconKey: "external"
+        }
+      ]
+    },
+    {
+      title: "DevConnect",
+      type: "Proyecto de fin de curso",
+      description:
+        "Red social para el sector IT desarrollada como proyecto final de DAW, con frontend en Angular y backend en Laravel.",
+      highlight:
+        "El foco del proyecto está en construir una aplicación Full-Stack completa, separando cliente y servidor, con una base funcional para perfiles, comunidad y conexión entre profesionales tech.",
+      bullets: [
+        "Desarrollo del frontend con Angular y TypeScript.",
+        "Uso de RxJS e interceptors para gestionar flujos y comunicación con la API.",
+        "Construcción del backend con Laravel.",
+        "Arquitectura SPA con base de datos PostgreSQL."
+      ],
+      tags: ["Angular", "RxJS", "Laravel", "PostgreSQL", "SPA"],
+      linkMode: "in-progress",
+      status: "Proyecto final DAW",
+      statusDetail: "Frontend disponible en GitHub",
+      media: {
+        poster: "/assets/devconnect-login.png",
+        posterAlt: "Pantalla de inicio de DevConnect con hero, llamada a la acción y formulario de acceso.",
+        detailPanel: {
+          title: "Arquitectura Full-Stack",
+          items: [
+            "SPA en Angular",
+            "RxJS e interceptors",
+            "Laravel y PostgreSQL"
+          ],
+          note: "Proyecto de fin de curso centrado en conectar perfiles tech mediante una aplicación web separada por capas."
+        },
+        frames: [
+          {
+            src: "/assets/devconnect-login.png",
+            alt: "Pantalla de inicio de sesión de DevConnect con hero y formulario de acceso.",
+            objectPosition: "center center",
+            label: "Hero y login"
+          },
+          {
+            src: "/assets/devconnect-feed.png",
+            alt: "Feed principal de DevConnect con publicaciones y paneles laterales.",
+            objectPosition: "center top",
+            label: "Feed principal"
+          }
+        ]
+      },
+      actions: [
+        {
+          label: "GitHub",
+          href: "https://github.com/jesusdev98/DevConnect-Frontend",
           variant: "ghost",
           external: true,
           iconKey: "github"

@@ -1,56 +1,75 @@
-# Portfolio | Carolina Vilar Ródenas
+# CVR — Portfolio
 
-Portfolio personal desarrollado con Next.js, TypeScript y Tailwind CSS. El proyecto presenta una experiencia visual minimalista, profesional y con una estética futurista sobria, centrada en mostrar perfil, habilidades, experiencia, proyectos y vías de contacto.
+Portfolio personal construido con Next.js, TypeScript y Tailwind CSS.
+
+No quería un portfolio genérico. Quería algo oscuro, técnico y con una identidad visual; una interfaz que se sintiera más cercana a un sistema real que a una plantilla de portfolio. Parte de esa identidad nace de una ilustración original del 2017 que he reinterpretado para el proyecto!
+
+El fondo ambiental y el sistema de motion están construidos para acompañar la navegación de forma sutil, sin competir con el contenido.
+
+→ [prototipo-portfolio-rho.vercel.app/en](https://prototipo-portfolio-rho.vercel.app/en)
+
+---
 
 ## Stack
 
-- Next.js con App Router
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide React
-- Canvas 2D para la pecera cuántica ambiental
+- **Next.js** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Canvas 2D** — fondo ambiental
+- **Lucide React**
 
-## Scripts
+---
+
+## Lo que tiene
+
+**Routing bilingüe** — `/en` y `/es` sin librerías externas de i18n, con contenido tipado y rutas localizadas.
+
+**Canvas ambiental** — el fondo no es un GIF ni un vídeo. Es una pieza construida con Canvas 2D para acompañar la interfaz sin competir con el contenido.
+
+**Arquitectura modular** — el contenido está separado de la presentación. Cambiar textos o ajustar secciones no implica tocar la lógica visual.
+
+**Motion contenido** — las animaciones están para guiar, no para distraer. Sin parallax agresivo ni efectos puestos porque sí.
+
+**Responsive orientado a desktop** — funciona en móvil, pero está pensado para lucir especialmente bien en pantalla grande.
+
+---
+
+## Desarrollo
 
 ```bash
 npm install
 npm run dev
+```
+
+```text
+http://localhost:3000
+```
+
+## Build
+
+```bash
 npm run build
 npm run start
 ```
 
-## Funcionalidades
-
-- Rutas localizadas para español e inglés.
-- Secciones de perfil, habilidades, proyectos, experiencia y contacto.
-- Animaciones suaves con Framer Motion.
-- Fondo ambiental interactivo con Canvas 2D.
-- Contenido centralizado y fácil de editar desde `data/`.
-- Recursos estáticos en `public/assets/`, incluyendo imagen principal, vídeos de proyectos y CV descargable.
-
-## GitHub Snapshot
-
-La página principal puede mostrar una señal ligera de GitHub usando la API oficial de usuarios.
-
-- Fuente oficial: `https://api.github.com/users/{username}`
-- Datos mostrados: repositorios públicos y fecha de alta
-- Caché: revalidación server-side cada 6 horas
-- Token opcional: `GITHUB_TOKEN` para aumentar el límite de peticiones
-- Si la llamada falla, el panel mantiene una narrativa visual curada
+---
 
 ## Estructura
 
 ```text
-app/                         Layout, estilos globales y páginas localizadas
-components/sections/          Hero, About, Skills, Projects, Experience y Contact
-components/quantum-aquarium/  Canvas ambiental de la pecera cuántica
+app/                          Routing y páginas localizadas
+components/sections/          Secciones del portfolio
+components/quantum-aquarium/  Lógica del Canvas ambiental
 components/ui/                Componentes reutilizables
-data/                         Contenido editable e internacionalización
-public/assets/                Imagen hero, vídeos, previews y CV descargable
+data/                         Contenido e i18n
+public/assets/                Media y CV descargable
 ```
 
-## Dirección visual
+---
 
-El diseño combina una base oscura, detalles glassmorphism, movimiento atmosférico y una interfaz clara. La pecera cuántica funciona como elemento ambiental secundario: acompaña la navegación sin competir con los proyectos ni con el contenido principal.
+## Notas
+
+El objetivo del proyecto era construir algo con coherencia visual de principio a fin que me gustara y que cargara rápido.
+
 

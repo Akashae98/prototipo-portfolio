@@ -2,9 +2,9 @@ import type { PortfolioContent } from "@/data/profile";
 
 export const es: PortfolioContent = {
   metadata: {
-    title: "Carol Vilar | Portfolio de Desarrolladora Full-Stack",
+    title: "Carol Vilar | Desarrolladora web junior",
     description:
-      "Portfolio de Carol Vilar, desarrolladora Full-Stack centrada en backend, APIs y aplicaciones web."
+      "Portfolio de Carol Vilar, desarrolladora web junior con experiencia práctica en frontend, backend y producto digital."
   },
   ui: {
     localeSwitcherLabel: "Selector de idioma"
@@ -12,8 +12,8 @@ export const es: PortfolioContent = {
   profile: {
     name: "Carol Vilar",
     legalName: "Carolina Vilar Rodenas",
-    role: "Desarrolladora Full-Stack Junior",
-    headline: "Desarrolladora orientada a backend, APIs y aplicaciones web.",
+    role: "Desarrolladora web junior",
+    headline: "Desarrollo aplicaciones web. Me muevo entre frontend y backend y me gusta entender bien lo que construyo.",
     stackLine: "Angular / Laravel / Java / SQL / APIs REST",
     email: "carolvr8@gmail.com",
     github: "https://github.com/Akashae98",
@@ -22,86 +22,85 @@ export const es: PortfolioContent = {
   },
   navigation: [
     { label: "Perfil", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "Tecnologías", href: "#skills" },
     { label: "Proyectos", href: "#projects" },
     { label: "Experiencia", href: "#experience" },
     { label: "Contacto", href: "#contact" }
   ],
   sectionCopy: {
     hero: {
-      label: "Backend / APIs / SaaS",
-      rightLabel: "Sistemas Full-Stack",
+      label: "Web / SaaS / Producto",
+      rightLabel: "Interfaz, lógica, datos",
       viewProjectsLabel: "Ver proyectos",
       downloadCvLabel: "Descargar CV",
       illustrationCaption: "Ilustración original, reinterpretada en 2026"
     },
     about: {
       label: "Perfil",
-      title: "Pensamiento analítico, software claro.",
+      title: "Me gusta entender cómo funcionan las cosas.",
       intro:
-        "Aprendo rápido, me interesa entender cómo funcionan los productos y me gusta trabajar con cuidado sobre código ya existente.",
-      focusLabel: "En qué estoy enfocada",
+        "Aprendo rápido, me gusta entender cómo están hechas las cosas y me siento cómoda moviéndome entre interfaz, lógica y datos según lo que el proyecto necesite.",
+      focusLabel: "Ahora mismo",
       focus:
-        "Seguir creciendo como desarrolladora Full-Stack en un equipo donde pueda construir software útil, escribir código claro y seguir mejorando en backend y frontend."
+        "Busco un equipo donde pueda seguir creciendo, tocar distintas partes del producto y aprender trabajando sobre problemas reales."
     },
     skills: {
-      label: "Skills",
-      title: "Herramientas con las que construyo aplicaciones web.",
+      label: "Tecnologías",
+      title: "Herramientas con las que trabajo.",
       intro:
-        "Tecnologías base para desarrollo web Full-Stack, junto con proyectos técnicos que muestran arquitectura, implementación y resolución de problemas."
+        "Tecnologías que he usado en proyectos reales y personales, desde interfaz y lógica de negocio hasta APIs y bases de datos."
     },
     projects: {
       label: "Proyectos",
-      title: "Proyectos que muestran cómo construyo y cómo pienso.",
+      title: "Proyectos que explican mejor cómo trabajo.",
       intro:
-        "Una selección de trabajo centrada en arquitectura, decisiones de implementación y desarrollo práctico."
+        "Aquí se ve mejor cómo pienso, qué tipo de problemas me interesan y cómo los afronto."
     },
     experience: {
       label: "Experiencia",
-      title: "Experiencia reciente y habilidades transferibles.",
+      title: "Experiencia y formación.",
       intro:
-        "Experiencia en SaaS, formación en desarrollo web y una base analítica aplicada al trabajo con software."
+        "Trabajo reciente en SaaS, formación técnica y una forma de aprender muy práctica."
     },
     contact: {
       label: "Contacto",
-      title: "Abierta a oportunidades de desarrollo Full-Stack.",
-      intro:
-        "Disponible para prácticas, puestos junior y equipos que construyen productos web sólidos.",
+      title: "Abierta a nuevas oportunidades.",
+      intro: "",
       body:
-        "Abierta a prácticas, puestos junior de Full-Stack y equipos que construyen productos web útiles y bien resueltos.",
+        "Me interesan especialmente los equipos donde pueda tocar distintas capas del producto, trabajar cerca del problema y seguir creciendo como desarrolladora.",
       footer: "Hecho con Next.js, TypeScript y Tailwind CSS.",
       downloadCvLabel: "Descargar CV"
     }
   },
   about: [
-    "Desarrolladora Full-Stack con experiencia práctica construyendo funcionalidades para productos SaaS y una base sólida en desarrollo web, backend y bases de datos.",
-    "Mi formación en filosofía ha marcado mi forma de trabajar con software: pensamiento estructurado, comunicación clara y la costumbre de entender bien los problemas antes de resolverlos.",
-    "Me interesan especialmente los sistemas backend, las APIs y los proyectos técnicos donde importan la arquitectura y la mantenibilidad."
+    "He trabajado en producto SaaS y he tocado frontend, backend y datos en proyectos de prácticas, formación y trabajo personal.",
+    "Mi formación en filosofía ha influido mucho en cómo trabajo: tiendo a ordenar bien los problemas, comunicar con claridad y no conformarme con la primera solución que funciona.",
+    "Disfruto especialmente los proyectos donde hay que entender bien qué pasa, pensar una solución con sentido y dejar un código que otra persona pueda seguir sin pelearse con él."
   ],
   currentLearning: {
     title: "Aprendiendo ahora",
-    text: "Arquitectura backend, diseño de sistemas, Spring Boot y profundización en Java."
+    text: "Java, Spring Boot y diseño de sistemas, sin perder de vista el frontend y el trabajo de producto."
   },
   developerSignals: {
-    label: "Developer Signals",
-    title: "En qué estoy centrada ahora mismo.",
+    label: "Ahora",
+    title: "En lo que estoy centrada ahora mismo.",
     intro:
-      "Una vista rápida de lo que estoy construyendo y de la dirección técnica en la que quiero seguir creciendo.",
+      "Una foto rápida de lo que estoy aprendiendo y construyendo en esta etapa.",
     building: {
-      title: "Construyendo ahora",
+      title: "En marcha",
       text:
-        "Refinamiento del portfolio, profundización en Java y aprendizaje de Spring Boot como parte de mi crecimiento como desarrolladora Full-Stack."
+        "Estoy puliendo el portfolio, profundizando en Java y aprendiendo Spring Boot para ampliar mi base técnica y sentirme más cómoda cubriendo todo el stack."
     },
     highlight: {
-      label: "Proyecto destacado",
-      title: "Release de JavaFX Fish Simulation",
+      label: "Destacado",
+      title: "JavaFX Fish Simulation",
       text:
-        "Simulación de escritorio con comportamiento procedural de peces, estructura ECS, sistemas de colisión e integración con ANU QRNG."
+        "Simulación de escritorio con comportamiento procedural, estructura ECS, sistemas de colisión e integración con ANU QRNG."
     },
     stats: [
       { label: "Repositorios", value: "Trabajo de producción y aprendizaje" },
       { label: "Tecnologías", value: "Angular / Laravel / Java / SQL / APIs REST" },
-      { label: "Foco actual", value: "Crecimiento Full-Stack, Java y Spring Boot" }
+      { label: "Foco actual", value: "Java, Spring Boot y aplicaciones web de extremo a extremo" }
     ]
   },
   skillGroups: [
@@ -129,11 +128,11 @@ export const es: PortfolioContent = {
       title: "Proyectos técnicos",
       iconKey: "sparkles",
       items: [
-        "JavaFX",
         "Arquitectura ECS",
-        "Simulación interactiva",
-        "Integración con APIs externas",
-        "Generación procedural"
+        "Generación procedural",
+        "RxJS e interceptors",
+        "Autenticación con Sanctum",
+        "SaaS multi-tenant"
       ]
     }
   ],
@@ -144,7 +143,7 @@ export const es: PortfolioContent = {
       description:
         "Simulación interactiva en JavaFX construida con arquitectura ECS, generación procedural de entidades, sistemas de colisión e integración con aleatoriedad cuántica real a través de la API de ANU QRNG.",
       highlight:
-        "El foco está en arquitectura, sistemas de simulación e interacción en tiempo real, más que en un diseño CRUD tradicional.",
+        "Más que un CRUD, aquí me interesaba trabajar arquitectura, comportamiento y sistemas en tiempo real.",
       bullets: [
         "Diseño de una arquitectura Entity Component System.",
         "Implementación de generación procedural de peces y su lógica de movimiento.",
@@ -166,7 +165,7 @@ export const es: PortfolioContent = {
         poster: "/assets/fish-sim-thumb.jpg",
         posterAlt: "Captura de la simulación en JavaFX con varios peces y burbujas.",
         video: "/assets/fish-sim-preview.mp4",
-        badgeLabel: "Preview de la build de escritorio",
+        badgeLabel: "Vista previa de la versión de escritorio",
         frames: [
           {
             src: "/assets/fish-sim-thumb.jpg",
@@ -198,7 +197,7 @@ export const es: PortfolioContent = {
           iconKey: "github"
         },
         {
-          label: "Release de escritorio",
+          label: "Descargar app",
           href: "https://github.com/Akashae98/JavaFX-Fish-Simulation/releases/tag/v0.1.2",
           variant: "secondary",
           external: true,
@@ -210,9 +209,9 @@ export const es: PortfolioContent = {
       title: "Portfolio personal",
       type: "Proyecto web",
       description:
-        "Portfolio personal construido con Next.js, TypeScript y Tailwind CSS para presentar mi perfil y proyectos con una estructura técnica clara.",
+        "Portfolio personal construido con Next.js, TypeScript y Tailwind CSS para presentar mi perfil y proyectos de una forma clara, cuidada y fácil de recorrer.",
       highlight:
-        "Centrado en jerarquía de contenido, secciones reutilizables y un sistema visual contenido en lugar de complejidad decorativa.",
+        "Aquí el objetivo era ordenar bien el contenido, trabajar componentes reutilizables y evitar una interfaz recargada.",
       bullets: [
         "Implementado con Next.js App Router y TypeScript.",
         "Contenido estructurado mediante objetos reutilizables y componentes por sección.",
@@ -220,8 +219,8 @@ export const es: PortfolioContent = {
       ],
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       linkMode: "live-demo",
-      status: "Deploy en Vercel",
-      statusDetail: "Build pública disponible",
+      status: "Proyecto activo",
+      statusDetail: "Código disponible en GitHub",
       media: {
         poster: "/assets/portfolio-screenshot.png",
         posterAlt: "Captura de la hero del portfolio personal de Carol Vilar.",
@@ -232,7 +231,7 @@ export const es: PortfolioContent = {
             "Modelo de contenido tipado y secciones reutilizables",
             "Layout centrado en contenido con movimiento contenido"
           ],
-          note: "Construido para mantener la interfaz legible, estructurada y fácil de evolucionar."
+          note: "Lo construí para que fuese legible, fácil de mantener y sencillo de ampliar."
         },
         frames: [
           {
@@ -250,13 +249,6 @@ export const es: PortfolioContent = {
           variant: "ghost",
           external: true,
           iconKey: "github"
-        },
-        {
-          label: "Ver build",
-          href: "https://prototipo-portfolio-rho.vercel.app/en",
-          variant: "secondary",
-          external: true,
-          iconKey: "external"
         }
       ]
     },
@@ -264,14 +256,14 @@ export const es: PortfolioContent = {
       title: "DevConnect",
       type: "Proyecto de fin de curso",
       description:
-        "Red social para el sector IT desarrollada como proyecto final de DAW, con frontend en Angular y backend en Laravel.",
+        "Red social para el sector IT desarrollada como proyecto final de DAW, con publicaciones, comentarios, likes, perfiles de usuario y sistema de logros.",
       highlight:
-        "El foco del proyecto está en construir una aplicación Full-Stack completa, separando cliente y servidor, con una base funcional para perfiles, comunidad y conexión entre profesionales tech.",
+        "Además de la parte social, el proyecto me sirvió para trabajar separación cliente-servidor, autenticación y flujos reales de comunidad dentro de una aplicación web completa.",
       bullets: [
-        "Desarrollo del frontend con Angular y TypeScript.",
-        "Uso de RxJS e interceptors para gestionar flujos y comunicación con la API.",
-        "Construcción del backend con Laravel.",
-        "Arquitectura SPA con base de datos PostgreSQL."
+        "Desarrollo del frontend con Angular, TypeScript, RxJS e interceptors para gestionar flujos y comunicación con la API.",
+        "Construcción del backend con Laravel, incluyendo autenticación con Sanctum y cookies HTTP-only.",
+        "Arquitectura SPA con base de datos PostgreSQL.",
+        "Trabajo colaborativo con Git y GitHub siguiendo flujo de desarrollo en equipo."
       ],
       tags: ["Angular", "RxJS", "Laravel", "PostgreSQL", "SPA"],
       linkMode: "in-progress",
@@ -281,13 +273,13 @@ export const es: PortfolioContent = {
         poster: "/assets/devconnect-login.png",
         posterAlt: "Pantalla de inicio de DevConnect con hero, llamada a la acción y formulario de acceso.",
         detailPanel: {
-          title: "Arquitectura Full-Stack",
+          title: "Cliente y servidor",
           items: [
-            "SPA en Angular",
-            "RxJS e interceptors",
-            "Laravel y PostgreSQL"
+            "Angular, RxJS e interceptors",
+            "Laravel Sanctum y cookies HTTP-only",
+            "Perfiles, comunidad y gamificación"
           ],
-          note: "Proyecto de fin de curso centrado en conectar perfiles tech mediante una aplicación web separada por capas."
+          note: "Proyecto centrado en perfiles, comunidad e interacción dentro de una aplicación separada por capas."
         },
         frames: [
           {
@@ -317,15 +309,15 @@ export const es: PortfolioContent = {
   ],
   timeline: [
     {
-      title: "Full-Stack Developer Intern",
+      title: "Desarrolladora en prácticas",
       place: "Sinqro",
       date: "Feb 2026 - May 2026",
       iconKey: "cpu",
       details:
-        "Trabajo en una plataforma SaaS multi-tenant para restauración, contribuyendo a sistemas configurables de frontend, soporte multidioma, ajustes SEO y flujos de pedido.",
+        "Trabajé en una plataforma SaaS multi-tenant para restauración, participando en frontend configurable, soporte multidioma, ajustes SEO y flujos de pedido.",
       bullets: [
         "Desarrollo de funcionalidades para una plataforma SaaS multi-tenant del sector restauración.",
-        "Trabajo sobre arquitectura frontend configurable, branding y theming.",
+        "Trabajo sobre branding, theming y arquitectura frontend configurable.",
         "Implementación de soporte multidioma y configuración SEO.",
         "Colaboración en flujos de pedido y gestión."
       ]
@@ -344,7 +336,7 @@ export const es: PortfolioContent = {
       date: "2021 - 2025",
       iconKey: "briefcase",
       details:
-        "Desarrollo de habilidades de comunicación, autonomía, resolución de incidencias y coordinación en un entorno de atención al público."
+        "Cuatro años gestionando incidencias, coordinando con distintos departamentos y trabajando con autonomía en un entorno de atención al público."
     },
     {
       title: "Grado en Filosofía",

@@ -14,13 +14,13 @@ function AmbientSignalField() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-55 md:opacity-70"
+      className="pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-38 md:opacity-62"
     >
-      <div className="absolute bottom-[-30%] right-[-17%] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.11),rgba(96,165,250,0.05)_36%,transparent_68%)] blur-3xl" />
-      <div className="absolute bottom-[-3%] right-[-1%] h-[360px] w-[360px] rounded-full border border-white/[0.032] bg-white/[0.01] blur-[1px]" />
+      <div className="absolute right-[-18%] top-[2%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.08),rgba(96,165,250,0.04)_36%,transparent_70%)] blur-3xl md:right-[-14%] md:top-[-1%] md:h-[540px] md:w-[540px]" />
+      <div className="absolute right-[0%] top-[16%] hidden h-[300px] w-[300px] rounded-full border border-white/[0.03] bg-white/[0.01] blur-[1px] md:block md:right-[2%] md:top-[12%] md:h-[380px] md:w-[380px]" />
 
       <motion.div
-        className="absolute bottom-[-22%] right-[-10%] h-[430px] w-[430px] md:bottom-[-24%] md:right-[-7%] md:h-[520px] md:w-[520px]"
+        className="absolute right-[-18%] top-[8%] hidden h-[410px] w-[410px] md:block md:right-[-6%] md:top-[1%] md:h-[500px] md:w-[500px]"
         animate={reducedMotion ? undefined : { rotate: 360 }}
         transition={{ duration: 44, repeat: Infinity, ease: "linear" }}
       >
@@ -122,7 +122,7 @@ function AmbientSignalField() {
         </svg>
       </motion.div>
 
-      <div className="absolute bottom-[20%] right-[-5%] hidden w-[55%] min-w-[440px] rotate-[-3deg] md:block">
+      <div className="absolute bottom-[34%] right-[-2%] hidden w-[55%] min-w-[440px] rotate-[-3deg] lg:block">
         <div className="h-px bg-gradient-to-r from-transparent via-white/22 to-transparent" />
         <div className="mt-[-3px] flex items-center gap-2 pl-[18%]">
           {ribbonCells.map((cell) => (
@@ -149,6 +149,9 @@ function AmbientSignalField() {
 }
 
 export function DeveloperSignals({ developerSignals }: DeveloperSignalsProps) {
+  const reducedMotion = useReducedMotion();
+  const hasFocusTitle = Boolean(developerSignals.focusPanel.title);
+
   return (
     <section className="section-wrap pt-0" aria-labelledby="developer-signals">
       <motion.div
@@ -159,7 +162,7 @@ export function DeveloperSignals({ developerSignals }: DeveloperSignalsProps) {
         className="glass-panel relative overflow-hidden rounded-[2rem]"
       >
         <AmbientSignalField />
-        <div className="relative z-10 grid gap-px bg-white/7 lg:grid-cols-[1.16fr_0.84fr]">
+        <div className="relative z-10 grid gap-px bg-white/7 lg:grid-cols-[1.14fr_0.86fr]">
           <div className="relative bg-void/78 p-6 md:p-8">
             <p className="scan-label mb-4" id="developer-signals">
               {developerSignals.label}
@@ -167,41 +170,97 @@ export function DeveloperSignals({ developerSignals }: DeveloperSignalsProps) {
             <h2 className="max-w-2xl font-display text-2xl font-semibold leading-tight text-bone md:text-4xl">
               {developerSignals.title}
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-white/63 md:text-lg">
+            <p className="mt-4 max-w-[36rem] text-base leading-7 text-white/68 md:text-lg md:leading-8">
               {developerSignals.intro}
             </p>
-            <div className="mt-7 grid gap-3 md:grid-cols-3">
-              {developerSignals.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-[1.15rem] border border-white/8 bg-white/[0.02] px-4 py-4"
-                >
-                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-white/38">
-                    {stat.label}
+            <div className="relative mt-7 max-w-[30rem]">
+              <div className="relative h-px max-w-[9rem] bg-gradient-to-r from-white/12 via-white/6 to-transparent">
+                <motion.span
+                  aria-hidden="true"
+                  animate={reducedMotion ? undefined : { x: ["-12%", "118%"] }}
+                  className="absolute left-0 top-0 h-px w-14 bg-gradient-to-r from-transparent via-signalBlue/42 to-transparent"
+                  transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+                />
+              </div>
+              <div className="relative pt-3">
+                {hasFocusTitle ? (
+                  <p className="font-mono text-[0.67rem] tracking-[0.045em] text-white/58">
+                    {developerSignals.focusPanel.title}
                   </p>
-                  <p className="mt-2.5 text-sm leading-6 text-white/70">{stat.value}</p>
+                ) : null}
+                <div className={`relative pl-5 ${hasFocusTitle ? "mt-3.5" : "mt-1.5"}`}>
+                  <div className="absolute bottom-1 left-[3px] top-1 w-px bg-gradient-to-b from-white/14 via-white/5 to-transparent" />
+                  <div className="space-y-3">
+                    {developerSignals.focusPanel.items.map((item, index) => (
+                      <div key={item} className="flex items-start gap-3.5">
+                      <motion.span
+                        aria-hidden="true"
+                        animate={
+                          reducedMotion
+                            ? undefined
+                            : { opacity: [0.24, 0.54, 0.24], scale: [0.98, 1.03, 0.98] }
+                        }
+                        className="relative mt-[0.53rem] h-[6px] w-[6px] shrink-0 rounded-full border border-softPink/18 bg-[#151722] shadow-[0_0_6px_rgba(216,180,254,0.06)]"
+                        transition={{
+                          delay: index * 0.45,
+                          duration: 6.1,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        <span className="absolute inset-[1px] rounded-full bg-softPink/54" />
+                      </motion.span>
+                      <span className="text-sm leading-[1.65] text-white/70">{item}</span>
+                    </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
-          <div className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(255,255,255,0.026),rgba(255,255,255,0.012))] p-6 md:p-8">
+          <div className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(255,255,255,0.026),rgba(255,255,255,0.012))] p-6 md:p-8 lg:flex lg:items-start">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_76%,rgba(216,180,254,0.045),transparent_48%)]" />
-            <div className="relative z-10 rounded-[1.25rem] border border-white/9 bg-black/20 p-5 backdrop-blur-[2px]">
-              <p className="scan-label mb-3">{developerSignals.building.title}</p>
-              <p className="text-base leading-7 text-white/70">{developerSignals.building.text}</p>
-            </div>
-            <div className="relative z-10 mt-3 rounded-[1.25rem] border border-white/9 bg-white/[0.04] p-5 shadow-[0_18px_58px_rgba(0,0,0,0.16)] backdrop-blur-[3px]">
-              <p className="font-mono text-[0.64rem] uppercase tracking-[0.18em] text-softPink/66">
+            <motion.div
+              animate={
+                reducedMotion
+                  ? undefined
+                  : {
+                      boxShadow: [
+                        "0 18px 48px rgba(0,0,0,0.16)",
+                        "0 20px 54px rgba(0,0,0,0.2)",
+                        "0 18px 48px rgba(0,0,0,0.16)"
+                      ]
+                    }
+              }
+              className="relative z-10 mt-3 max-w-[25rem] rounded-[1.25rem] border border-white/9 bg-[linear-gradient(180deg,rgba(255,255,255,0.055),rgba(255,255,255,0.03))] p-6 shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-[3px] md:mt-4 md:p-7 lg:ml-auto lg:mr-2 lg:mt-[4rem] lg:translate-y-2"
+              transition={{ duration: 9.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <motion.div
+                aria-hidden="true"
+                animate={
+                  reducedMotion
+                    ? undefined
+                    : {
+                        opacity: [0.18, 0.3, 0.18],
+                        x: [0, 8, 0],
+                        y: [0, -4, 0]
+                      }
+                }
+                className="pointer-events-none absolute inset-[1px] rounded-[1.18rem] bg-[radial-gradient(circle_at_72%_34%,rgba(216,180,254,0.12),transparent_24%),radial-gradient(circle_at_34%_72%,rgba(96,165,250,0.08),transparent_28%)]"
+                transition={{ duration: 11.5, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/16 to-transparent" />
+              <p className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-white/38">
                 {developerSignals.highlight.label}
               </p>
-              <h3 className="mt-2.5 font-display text-xl font-semibold text-bone">
+              <p className="mt-2 text-xl font-display font-semibold text-bone">
                 {developerSignals.highlight.title}
-              </h3>
-              <p className="mt-2.5 text-sm leading-7 text-white/61">
+              </p>
+              <p className="mt-2.5 max-w-[18.5rem] text-sm leading-7 text-white/64">
                 {developerSignals.highlight.text}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

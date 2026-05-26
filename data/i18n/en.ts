@@ -81,10 +81,10 @@ export const en: PortfolioContent = {
     text: "Right now I'm going deeper into Java, Spring Boot, and system design without losing sight of how they fit with frontend work in a complete application."
   },
   developerSignals: {
-    label: "Now",
-    title: "What I'm working on right now.",
+    label: "Current Focus",
+    title: "The direction I want to keep growing in",
     intro:
-      "I'm going deeper into Java and Spring Boot while refining how frontend and backend fit together.",
+      "Right now I'm going deeper into Java and Spring Boot, with the goal of building more solid end-to-end web applications.",
     focusPanel: {
       items: [
         "Spring Boot and Java",
@@ -209,18 +209,18 @@ export const en: PortfolioContent = {
       },
       actions: [
         {
-          label: "Live Demo",
-          href: "https://devconnect-free.vercel.app/login",
-          variant: "secondary",
-          external: true,
-          iconKey: "external"
-        },
-        {
           label: "GitHub",
           href: "https://github.com/jesusdev98/DevConnect-Frontend",
           variant: "ghost",
           external: true,
           iconKey: "github"
+        },
+        {
+          label: "Live Demo",
+          href: "https://devconnect-free.vercel.app/login",
+          variant: "secondary",
+          external: true,
+          iconKey: "external"
         }
       ]
     },

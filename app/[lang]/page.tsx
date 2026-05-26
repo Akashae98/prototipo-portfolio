@@ -33,7 +33,6 @@ export default function Home({
           profile={content.profile}
         />
         <Hero profile={content.profile} heroCopy={content.sectionCopy.hero} />
-        <DeveloperSignals developerSignals={content.developerSignals} />
         <About aboutCopy={content.sectionCopy.about} about={content.about} />
         <Skills
           skillsCopy={content.sectionCopy.skills}
@@ -42,6 +41,7 @@ export default function Home({
         />
         <Projects projectsCopy={content.sectionCopy.projects} projects={content.projects} />
         <Experience experienceCopy={content.sectionCopy.experience} timeline={content.timeline} />
+        <DeveloperSignals developerSignals={content.developerSignals} />
         <Contact
           contactCopy={content.sectionCopy.contact}
           contactLinks={content.contactLinks}

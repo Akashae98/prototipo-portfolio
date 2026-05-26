@@ -88,7 +88,7 @@ a {
 .section-wrap {
   margin: 0 auto;
   width: min(1120px, calc(100% - 40px));
-  padding: 112px 0;
+  padding: 92px 0;
 }
 
 .glass-panel {
@@ -127,7 +127,7 @@ a {
 @media (max-width: 760px) {
   .section-wrap {
     width: min(100% - 28px, 1120px);
-    padding: 76px 0;
+    padding: 64px 0;
   }
 }
 

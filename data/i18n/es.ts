@@ -52,7 +52,7 @@ export const es: PortfolioContent = {
     },
     projects: {
       label: "Proyectos",
-      title: "Proyectos que mejor muestran cómo trabajo.",
+      title: "Proyectos que muestran cómo trabajo.",
       intro:
         "Aquí es donde mejor se ve cómo trabajo, qué me interesa construir y cómo afronto los problemas."
     },
@@ -81,10 +81,10 @@ export const es: PortfolioContent = {
     text: "Ahora estoy profundizando en Java, Spring Boot y diseño de sistemas, sin perder de vista cómo encajan con el frontend en una aplicación completa."
   },
   developerSignals: {
-    label: "Ahora",
-    title: "En lo que estoy trabajando ahora.",
+    label: "Foco Actual",
+    title: "Hacia donde voy ahora.",
     intro:
-      "Estoy profundizando en Java y Spring Boot mientras sigo afinando cómo encajan frontend y backend.",
+      "Ahora mismo estoy profundizando en Java y Spring Boot, con la idea de seguir construyendo aplicaciones web sólidas.",
     focusPanel: {
       items: [
         "Spring Boot y Java",
@@ -209,18 +209,18 @@ export const es: PortfolioContent = {
       },
       actions: [
         {
-          label: "Ver demo",
-          href: "https://devconnect-free.vercel.app/login",
-          variant: "secondary",
-          external: true,
-          iconKey: "external"
-        },
-        {
           label: "GitHub",
           href: "https://github.com/jesusdev98/DevConnect-Frontend",
           variant: "ghost",
           external: true,
           iconKey: "github"
+        },
+        {
+          label: "Ver demo",
+          href: "https://devconnect-free.vercel.app/login",
+          variant: "secondary",
+          external: true,
+          iconKey: "external"
         }
       ]
     },

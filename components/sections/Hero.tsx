@@ -71,13 +71,13 @@ export function Hero({ profile, heroCopy }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-7xl items-center gap-8 px-4 pb-12 pt-6 md:grid-cols-[0.57fr_0.43fr] md:px-8 md:pb-16 md:pt-10"
+      className="relative mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-7xl items-start gap-8 px-4 pb-10 pt-4 sm:pb-12 sm:pt-6 md:grid-cols-[0.57fr_0.43fr] md:items-center md:px-8 md:pb-16 md:pt-10"
     >
       <motion.div
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.12, delayChildren: 0.08 }}
-        className="relative z-10 max-w-3xl pr-2 md:-translate-y-5"
+        className="relative z-10 max-w-3xl pr-2 pt-4 sm:pt-10 md:-translate-y-5 md:pt-0"
       >
         <motion.p variants={fadeUp} className="scan-label mb-5">
           {heroCopy.label}
@@ -96,7 +96,7 @@ export function Hero({ profile, heroCopy }: HeroProps) {
         </motion.p>
         <motion.p
           variants={fadeUp}
-          className="mt-4 max-w-[34rem] text-base leading-8 text-white/68 md:text-lg"
+          className="mt-4 max-w-[34rem] text-base leading-7 text-white/68 sm:leading-8 md:text-lg"
         >
           {profile.headline}
         </motion.p>
@@ -106,7 +106,7 @@ export function Hero({ profile, heroCopy }: HeroProps) {
         >
           {profile.stackLine}
         </motion.p>
-        <motion.div variants={fadeUp} className="mt-9 flex flex-col gap-3 sm:flex-row">
+        <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
           <ButtonLink href="#projects">
             {heroCopy.viewProjectsLabel}
             <ArrowDownRight size={17} />
@@ -118,7 +118,7 @@ export function Hero({ profile, heroCopy }: HeroProps) {
         </motion.div>
         <motion.div
           variants={fadeUp}
-          className="mt-8 flex items-center gap-3 text-sm text-white/54"
+          className="mt-6 flex flex-wrap items-center gap-3 text-sm text-white/54 sm:mt-8"
         >
           <a
             className="focus-ring inline-flex items-center gap-2 transition hover:text-white"
@@ -146,7 +146,7 @@ export function Hero({ profile, heroCopy }: HeroProps) {
         initial={{ opacity: 0, scale: 0.96, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative min-h-[380px] md:min-h-[580px]"
+        className="relative min-h-[320px] pt-2 sm:min-h-[380px] sm:pt-0 md:min-h-[580px]"
       >
         <div className="absolute inset-x-8 top-[16%] h-[54%] rounded-[44%] bg-[radial-gradient(circle,rgba(139,92,246,0.12),rgba(96,165,250,0.06)_42%,transparent_72%)] blur-3xl" />
         <div className="absolute right-[10%] top-[14%] h-28 w-28 rounded-full border border-signalBlue/10 bg-signalBlue/[0.035] blur-md" />

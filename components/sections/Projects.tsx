@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Download, ExternalLink, Github } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import type { PortfolioContent, ProjectAction, ProjectActionIconKey } from "@/data/profile";
+import type { PortfolioContent, ProjectActionIconKey } from "@/data/profile";
 
 function notifyAquariumTarget(event: MouseEvent<HTMLElement>) {
   const rect = event.currentTarget.getBoundingClientRect();
@@ -95,13 +95,60 @@ function PortfolioStructurePreview({
 
 function ProjectMediaBlock({
   project,
-  highlighted
+  featured
 }: {
   project: PortfolioContent["projects"][number];
-  highlighted: boolean;
+  featured: boolean;
 }) {
-  if (project.linkMode === "in-progress" && project.media.detailPanel && !project.media.frames) {
-    return <PortfolioStructurePreview project={project} />;
+  if (!featured) {
+    if (project.linkMode === "in-progress" && project.media.detailPanel && !project.media.frames) {
+      return <PortfolioStructurePreview project={project} />;
+    }
+
+    const previewItems =
+      project.media.detailPanel?.items.slice(0, 2) ??
+      project.media.frames?.slice(0, 2).map((frame) => frame.label) ??
+      [];
+
+    return (
+      <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0a0d16]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.08),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(139,92,246,0.1),transparent_38%)]" />
+        <div className="absolute inset-[1px] rounded-[1.55rem] border border-white/6" />
+        <div className="relative p-4 md:p-5">
+          <div className="rounded-[1.3rem] border border-white/10 bg-[#0b1018]/92 p-4">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-[1.1rem] border border-white/10 bg-black/20">
+              <Image
+                src={project.media.poster}
+                alt={project.media.posterAlt}
+                fill
+                sizes="(min-width: 768px) 520px, 100vw"
+                className="object-cover opacity-82"
+                style={{
+                  objectPosition:
+                    project.title === "DevConnect" ? "center 46%" : "center center"
+                }}
+              />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,17,0.04),rgba(8,10,17,0.22))]" />
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {previewItems.slice(0, 2).map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-white/62"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+            {project.media.detailPanel?.note ? (
+              <div className="mt-4 rounded-2xl border border-violetCore/14 bg-violetCore/[0.05] px-4 py-3 text-sm leading-6 text-white/60">
+                {project.media.detailPanel.note}
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (project.media.video) {
@@ -171,7 +218,7 @@ function ProjectMediaBlock({
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(139,92,246,0.14),transparent_36%)]" />
         <div className="absolute inset-[1px] rounded-[1.55rem] border border-white/6" />
         <div className="relative p-4 md:p-5">
-          <div className="relative aspect-[16/8.6] overflow-hidden rounded-[1.3rem] border border-white/10 bg-black/20">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-[1.3rem] border border-white/10 bg-black/20">
             <Image
               src={project.media.poster}
               alt={project.media.posterAlt}
@@ -183,7 +230,7 @@ function ProjectMediaBlock({
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,10,17,0.03),rgba(8,10,17,0.18))]" />
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            {project.media.detailPanel.items.slice(0, 3).map((item) => (
+            {project.media.detailPanel.items.slice(0, 2).map((item) => (
               <span
                 key={item}
                 className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-white/62"
@@ -192,13 +239,13 @@ function ProjectMediaBlock({
               </span>
             ))}
           </div>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid gap-3 sm:grid-cols-[0.9fr_1.1fr]">
             {project.media.frames.slice(1).map((frame) => (
               <div
                 key={frame.label}
                 className="rounded-2xl border border-white/10 bg-white/[0.035] p-2"
               >
-                <div className="relative h-24 overflow-hidden rounded-xl border border-white/8">
+                <div className="relative h-20 overflow-hidden rounded-xl border border-white/8">
                   <Image
                     src={frame.src}
                     alt={frame.alt}
@@ -214,12 +261,10 @@ function ProjectMediaBlock({
               </div>
             ))}
             {project.media.frames.length > 1 && project.media.detailPanel.note ? (
-                <div
-                  className="rounded-2xl border border-violetCore/18 bg-violetCore/[0.07] px-4 py-3 text-sm leading-6 text-white/64"
-                >
-                  {project.media.detailPanel.note}
-                </div>
-              ) : null}
+              <div className="flex items-center rounded-2xl border border-violetCore/14 bg-violetCore/[0.05] px-4 py-3 text-sm leading-6 text-white/60">
+                {project.media.detailPanel.note}
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -238,7 +283,7 @@ function ProjectMediaBlock({
             alt={project.media.posterAlt}
             fill
             sizes="(min-width: 768px) 260px, 100vw"
-            className={`object-cover ${highlighted ? "opacity-70" : "opacity-82"}`}
+            className="object-cover opacity-82"
           />
         </div>
         <div className="relative z-10 flex flex-col justify-between">
@@ -284,7 +329,7 @@ export function Projects({ projectsCopy, projects }: ProjectsProps) {
         title={projectsCopy.title}
         intro={projectsCopy.intro}
       />
-      <div className="grid items-start gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="grid items-stretch gap-5 lg:auto-rows-fr lg:grid-cols-2">
         {projects.map((project, index) => (
           <motion.article
             key={project.title}
@@ -294,81 +339,83 @@ export function Projects({ projectsCopy, projects }: ProjectsProps) {
             transition={{ duration: 0.62, delay: index * 0.08 }}
             onMouseEnter={notifyAquariumTarget}
             onMouseLeave={clearAquariumTarget}
-            className="glass-panel group relative self-start overflow-hidden rounded-[2rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-signalBlue/28 md:p-6"
+            className="glass-panel group relative flex h-full flex-col self-stretch overflow-hidden rounded-[2rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-signalBlue/28 md:p-6"
           >
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-signalBlue/60 to-transparent" />
             <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-violetCore/8 blur-3xl transition group-hover:bg-violetCore/12" />
 
-            <ProjectMediaBlock project={project} highlighted={index === 1} />
+            <ProjectMediaBlock project={project} featured={index === 0} />
 
-            <div className="mt-7 flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <p className="scan-label mb-4">{project.type}</p>
-                <h3 className="max-w-xl font-display text-2xl font-semibold leading-tight text-white md:text-3xl">
-                  {project.title}
-                </h3>
+            <div className="mt-7 flex flex-1 flex-col">
+              <div className="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <p className="scan-label mb-4">{project.type}</p>
+                  <h3 className="max-w-xl font-display text-2xl font-semibold leading-tight text-white md:text-3xl">
+                    {project.title}
+                  </h3>
+                </div>
+                <div className="flex flex-col items-start gap-2">
+                  <span
+                    className={`rounded-full px-3 py-1.5 text-xs font-medium ${
+                      index === 0
+                        ? "border border-violetCore/30 bg-violetCore/10 text-softPink"
+                        : "border border-white/10 bg-white/[0.04] text-white/66"
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col items-start gap-2">
-                <span
-                  className={`rounded-full px-3 py-1.5 text-xs font-medium ${
-                    index === 0
-                      ? "border border-violetCore/30 bg-violetCore/10 text-softPink"
-                      : "border border-white/10 bg-white/[0.04] text-white/66"
-                  }`}
-                >
-                  {project.status}
-                </span>
-                <span className="font-mono text-[0.64rem] uppercase tracking-[0.14em] text-white/40">
-                  {project.statusDetail}
-                </span>
+
+              <p className="mt-5 text-base leading-7 text-white/66">
+                {project.description}
+              </p>
+              <p className="mt-4 border-l border-signalBlue/24 pl-4 text-sm leading-7 text-white/72">
+                {project.highlight}
+              </p>
+
+              <ul className="mt-5 space-y-2 text-sm leading-6 text-white/58">
+                {project.bullets.slice(0, index === 0 ? 3 : 2).map((bullet) => (
+                  <li key={bullet} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-signalBlue/70" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {project.tags.slice(0, 4).map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-white/60"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-            </div>
 
-            <p className="mt-5 text-base leading-7 text-white/66">
-              {index === 0
-                ? project.description
-                : project.description.replace(
-                    " to present my profile and projects with a clear technical structure.",
-                    " with a clear technical structure."
-                  )}
-            </p>
-            <p className="mt-4 border-l border-signalBlue/24 pl-4 text-sm leading-7 text-white/72">
-              {project.highlight}
-            </p>
-
-            <ul className="mt-5 space-y-2 text-sm leading-6 text-white/58">
-              {project.bullets.slice(0, index === 0 ? 4 : 2).map((bullet) => (
-                <li key={bullet} className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-signalBlue/70" />
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {project.tags.slice(0, index === 0 ? 5 : 4).map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-white/60"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              {project.actions.map((action) => (
-                <ButtonLink
-                  key={action.label}
-                  href={action.href}
-                  rel={action.external ? "noreferrer" : undefined}
-                  target={action.external ? "_blank" : undefined}
-                  variant={action.variant ?? "ghost"}
-                >
-                  <ActionIcon iconKey={action.iconKey} />
-                  {action.label}
-                </ButtonLink>
-              ))}
+              <div className="mt-auto pt-8">
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    {project.actions.map((action) => (
+                      <ButtonLink
+                        key={action.label}
+                        href={action.href}
+                        rel={action.external ? "noreferrer" : undefined}
+                        target={action.external ? "_blank" : undefined}
+                        variant={action.variant ?? "ghost"}
+                      >
+                        <ActionIcon iconKey={action.iconKey} />
+                        {action.label}
+                      </ButtonLink>
+                    ))}
+                    <span className="font-mono text-[0.64rem] uppercase tracking-[0.14em] text-white/40">
+                      {"— "}
+                      {project.statusDetail}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.article>
         ))}

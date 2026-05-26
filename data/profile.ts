@@ -6,6 +6,12 @@ export type ContactIconKey = "mail" | "github" | "linkedin";
 
 export type SkillGroupIconKey = "code2" | "database" | "network" | "terminal" | "sparkles";
 
+export type SkillItemKind = "technology" | "concept";
+
+export type SkillItemEmphasis = "primary" | "secondary";
+
+export type SkillGroupVisualWeight = "primary" | "standard" | "feature" | "compact";
+
 export type TimelineIconKey = "briefcase" | "code2" | "cpu" | "network";
 
 export type ProjectAction = {
@@ -40,6 +46,12 @@ export type ProjectMedia = {
 };
 
 export type ProjectLinkMode = "live-demo" | "desktop-download" | "in-progress";
+
+export type SkillItem = {
+  label: string;
+  kind?: SkillItemKind;
+  emphasis?: SkillItemEmphasis;
+};
 
 export type PortfolioContent = {
   metadata: {
@@ -112,24 +124,21 @@ export type PortfolioContent = {
     label: string;
     title: string;
     intro: string;
-    building: {
-      title: string;
-      text: string;
+    focusPanel: {
+      title?: string;
+      items: string[];
     };
     highlight: {
       label: string;
       title: string;
       text: string;
     };
-    stats: Array<{
-      label: string;
-      value: string;
-    }>;
   };
   skillGroups: Array<{
     title: string;
     iconKey: SkillGroupIconKey;
-    items: string[];
+    visualWeight?: SkillGroupVisualWeight;
+    items: SkillItem[];
   }>;
   projects: Array<{
     title: string;

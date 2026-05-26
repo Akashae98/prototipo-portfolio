@@ -13,7 +13,8 @@ export const es: PortfolioContent = {
     name: "Carol Vilar",
     legalName: "Carolina Vilar Rodenas",
     role: "Desarrolladora web junior",
-    headline: "Desarrollo aplicaciones web. Me muevo entre frontend y backend y me gusta entender bien lo que construyo.",
+    headline:
+      "Desarrollo aplicaciones web y me gusta entender bien cómo funcionan por dentro.",
     stackLine: "Angular / Laravel / Java / SQL / APIs REST",
     email: "carolvr8@gmail.com",
     github: "https://github.com/Akashae98",
@@ -37,24 +38,23 @@ export const es: PortfolioContent = {
     },
     about: {
       label: "Perfil",
-      title: "Me gusta entender cómo funcionan las cosas.",
+      title: "Me gusta entender cómo funcionan las cosas, no solo usarlas.",
       intro:
-        "Aprendo rápido, me gusta entender cómo están hechas las cosas y me siento cómoda moviéndome entre interfaz, lógica y datos según lo que el proyecto necesite.",
+        "Me manejo bien entre interfaz, lógica y datos cuando el proyecto lo necesita.",
       focusLabel: "Ahora mismo",
       focus:
-        "Busco un equipo donde pueda seguir creciendo, tocar distintas partes del producto y aprender trabajando sobre problemas reales."
+        "Busco un equipo donde seguir creciendo como desarrolladora y aprender de la gente que me rodea."
     },
     skills: {
       label: "Tecnologías",
       title: "Herramientas con las que trabajo.",
-      intro:
-        "Tecnologías que he usado en proyectos reales y personales, desde interfaz y lógica de negocio hasta APIs y bases de datos."
+      intro: "Tecnologías que ya he usado en proyectos reales y personales."
     },
     projects: {
       label: "Proyectos",
-      title: "Proyectos que explican mejor cómo trabajo.",
+      title: "Proyectos que mejor muestran cómo trabajo.",
       intro:
-        "Aquí se ve mejor cómo pienso, qué tipo de problemas me interesan y cómo los afronto."
+        "Aquí es donde mejor se ve cómo trabajo, qué me interesa construir y cómo afronto los problemas."
     },
     experience: {
       label: "Experiencia",
@@ -67,141 +67,160 @@ export const es: PortfolioContent = {
       title: "Abierta a nuevas oportunidades.",
       intro: "",
       body:
-        "Me interesan especialmente los equipos donde pueda tocar distintas capas del producto, trabajar cerca del problema y seguir creciendo como desarrolladora.",
+        "Me interesan los equipos donde pueda entender bien el problema, tocar varias partes de una aplicación y seguir mejorando como desarrolladora.",
       footer: "Hecho con Next.js, TypeScript y Tailwind CSS.",
       downloadCvLabel: "Descargar CV"
     }
   },
   about: [
-    "He trabajado en producto SaaS y he tocado frontend, backend y datos en proyectos de prácticas, formación y trabajo personal.",
-    "Mi formación en filosofía ha influido mucho en cómo trabajo: tiendo a ordenar bien los problemas, comunicar con claridad y no conformarme con la primera solución que funciona.",
-    "Disfruto especialmente los proyectos donde hay que entender bien qué pasa, pensar una solución con sentido y dejar un código que otra persona pueda seguir sin pelearse con él."
+    "He trabajado en producto SaaS y me he movido entre frontend, backend y datos en prácticas, formación y proyectos propios. Me gusta entender bien qué está pasando antes de tocar código.",
+    "La filosofía ha marcado bastante mi forma de trabajar: pensar con orden, comunicar con claridad y entender bien el problema antes de intentar resolverlo."
   ],
   currentLearning: {
     title: "Aprendiendo ahora",
-    text: "Java, Spring Boot y diseño de sistemas, sin perder de vista el frontend y el trabajo de producto."
+    text: "Ahora estoy profundizando en Java, Spring Boot y diseño de sistemas, sin perder de vista cómo encajan con el frontend en una aplicación completa."
   },
   developerSignals: {
     label: "Ahora",
-    title: "En lo que estoy centrada ahora mismo.",
+    title: "En lo que estoy trabajando ahora.",
     intro:
-      "Una foto rápida de lo que estoy aprendiendo y construyendo en esta etapa.",
-    building: {
-      title: "En marcha",
-      text:
-        "Estoy puliendo el portfolio, profundizando en Java y aprendiendo Spring Boot para ampliar mi base técnica y sentirme más cómoda cubriendo todo el stack."
+      "Estoy profundizando en Java y Spring Boot mientras sigo afinando cómo encajan frontend y backend.",
+    focusPanel: {
+      items: [
+        "Spring Boot y Java",
+        "Angular + RxJS",
+        "Proyectos personales full-stack"
+      ]
     },
     highlight: {
-      label: "Destacado",
+      label: "Proyecto destacado",
       title: "JavaFX Fish Simulation",
       text:
-        "Simulación de escritorio con comportamiento procedural, estructura ECS, sistemas de colisión e integración con ANU QRNG."
-    },
-    stats: [
-      { label: "Repositorios", value: "Trabajo de producción y aprendizaje" },
-      { label: "Tecnologías", value: "Angular / Laravel / Java / SQL / APIs REST" },
-      { label: "Foco actual", value: "Java, Spring Boot y aplicaciones web de extremo a extremo" }
-    ]
+        "Proyecto técnico sobre simulación procedural, ECS y comportamiento en tiempo real."
+    }
   },
   skillGroups: [
     {
       title: "Frontend",
       iconKey: "code2",
-      items: ["Angular", "TypeScript", "HTML", "CSS", "Responsive UI"]
+      visualWeight: "primary",
+      items: [
+        { label: "Angular", emphasis: "primary" },
+        { label: "TypeScript", emphasis: "primary" },
+        { label: "JavaScript" },
+        { label: "HTML" },
+        { label: "CSS" },
+        { label: "Responsive UI", kind: "concept" }
+      ]
     },
     {
       title: "Backend",
       iconKey: "database",
-      items: ["Laravel", "Java", "PHP", "APIs REST", "SQL"]
+      visualWeight: "primary",
+      items: [
+        { label: "Laravel", emphasis: "primary" },
+        { label: "Java", emphasis: "primary" },
+        { label: "PHP" },
+        { label: "APIs REST", kind: "concept" },
+        { label: "SQL" }
+      ]
     },
     {
       title: "Bases de datos",
       iconKey: "network",
-      items: ["MySQL", "PostgreSQL", "Bases de datos relacionales", "Consultas SQL", "Diseño de base de datos"]
+      visualWeight: "standard",
+      items: [
+        { label: "MySQL", emphasis: "primary" },
+        { label: "PostgreSQL", emphasis: "primary" },
+        { label: "Consultas SQL" },
+        { label: "Relacionales", kind: "concept" },
+        { label: "Diseño BD", kind: "concept" }
+      ]
+    },
+    {
+      title: "Intereses técnicos",
+      iconKey: "sparkles",
+      visualWeight: "feature",
+      items: [
+        { label: "Arquitectura ECS", kind: "concept", emphasis: "primary" },
+        { label: "SaaS multi-tenant", kind: "concept", emphasis: "primary" },
+        { label: "Generación procedural", kind: "concept" },
+        { label: "RxJS + Interceptors", kind: "concept" },
+        { label: "Laravel Sanctum", kind: "concept" }
+      ]
     },
     {
       title: "Herramientas",
       iconKey: "terminal",
-      items: ["Git", "GitHub", "Docker", "Postman"]
-    },
-    {
-      title: "Proyectos técnicos",
-      iconKey: "sparkles",
+      visualWeight: "compact",
       items: [
-        "Arquitectura ECS",
-        "Generación procedural",
-        "RxJS e interceptors",
-        "Autenticación con Sanctum",
-        "SaaS multi-tenant"
+        { label: "Git", emphasis: "primary" },
+        { label: "GitHub", emphasis: "primary" },
+        { label: "Visual Studio Code" },
+        { label: "Docker" },
+        { label: "Postman" },
+        { label: "Codex" }
       ]
     }
   ],
   projects: [
     {
-      title: "Interactive JavaFX Fish Simulation",
-      type: "Proyecto técnico",
+      title: "DevConnect",
+      type: "Proyecto final de curso",
       description:
-        "Simulación interactiva en JavaFX construida con arquitectura ECS, generación procedural de entidades, sistemas de colisión e integración con aleatoriedad cuántica real a través de la API de ANU QRNG.",
+        "Red social tech desarrollada como proyecto final, con frontend Angular y backend Laravel por capas.",
       highlight:
-        "Más que un CRUD, aquí me interesaba trabajar arquitectura, comportamiento y sistemas en tiempo real.",
+        "Es el proyecto que mejor resume cómo trabajo en web.",
       bullets: [
-        "Diseño de una arquitectura Entity Component System.",
-        "Implementación de generación procedural de peces y su lógica de movimiento.",
-        "Construcción de sistemas de colisión e interacción en JavaFX.",
-        "Integración de aleatoriedad cuántica real mediante la API de ANU QRNG."
+        "Frontend en Angular, TypeScript y RxJS con interceptors.",
+        "Backend en Laravel con Sanctum y cookies HTTP-only.",
+        "SPA con PostgreSQL en Neon y despliegue en Vercel y Railway."
       ],
-      tags: [
-        "Java",
-        "JavaFX",
-        "Arquitectura ECS",
-        "Generación procedural",
-        "Sistemas de colisión",
-        "ANU QRNG"
-      ],
-      linkMode: "desktop-download",
-      status: "Release v0.1.2",
-      statusDetail: "Descarga de escritorio disponible",
+      tags: ["Angular", "Laravel", "PostgreSQL", "Neon", "Vercel", "Railway"],
+      linkMode: "live-demo",
+      status: "Proyecto final DAW",
+      statusDetail: "Demo disponible en Vercel",
       media: {
-        poster: "/assets/fish-sim-thumb.jpg",
-        posterAlt: "Captura de la simulación en JavaFX con varios peces y burbujas.",
-        video: "/assets/fish-sim-preview.mp4",
-        badgeLabel: "Vista previa de la versión de escritorio",
+        poster: "/assets/devconnect-login.png",
+        posterAlt: "Pantalla de inicio de DevConnect con hero, llamada a la acción y formulario de acceso.",
+        detailPanel: {
+          title: "Cliente y servidor",
+          items: [
+            "Angular, RxJS e interceptors",
+            "Laravel Sanctum y cookies HTTP-only",
+            "Perfiles, comunidad y gamificación"
+          ],
+          note: "Proyecto de curso centrado en una aplicación web completa con cliente, servidor y flujos de comunidad."
+        },
         frames: [
           {
-            src: "/assets/fish-sim-thumb.jpg",
-            alt: "Captura amplia de la simulación con peces distribuidos por el acuario.",
-            video: "/assets/fish-sim-entity-spread-2.mp4",
-            objectPosition: "center top",
-            label: "Distribución de entidades"
-          },
-          {
-            src: "/assets/fish-sim-thumb.jpg",
-            alt: "Grupos de peces en la zona media mostrando espaciado y movimiento.",
+            src: "/assets/devconnect-login.png",
+            alt: "Pantalla de inicio de sesión de DevConnect con hero y formulario de acceso.",
             objectPosition: "center center",
-            label: "Campo de movimiento"
+            label: "Hero y login"
           },
           {
-            src: "/assets/fish-sim-thumb.jpg",
-            alt: "Zona inferior de la simulación con peces y partículas de burbujas.",
-            objectPosition: "center bottom",
-            label: "Ambiente en ejecución"
+            src: "/assets/devconnect-feed.png",
+            alt: "Feed principal de DevConnect con publicaciones y paneles laterales.",
+            objectPosition: "center top",
+            label: "Feed principal"
           }
         ]
       },
       actions: [
         {
+          label: "Ver demo",
+          href: "https://devconnect-free.vercel.app/login",
+          variant: "secondary",
+          external: true,
+          iconKey: "external"
+        },
+        {
           label: "GitHub",
-          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation",
+          href: "https://github.com/jesusdev98/DevConnect-Frontend",
           variant: "ghost",
           external: true,
           iconKey: "github"
-        },
-        {
-          label: "Descargar app",
-          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation/releases/tag/v0.1.2",
-          variant: "secondary",
-          external: true,
-          iconKey: "download"
         }
       ]
     },
@@ -209,13 +228,12 @@ export const es: PortfolioContent = {
       title: "Portfolio personal",
       type: "Proyecto web",
       description:
-        "Portfolio personal construido con Next.js, TypeScript y Tailwind CSS para presentar mi perfil y proyectos de una forma clara, cuidada y fácil de recorrer.",
+        "Portfolio en Next.js para presentar perfil, proyectos y criterio visual con una estructura clara.",
       highlight:
-        "Aquí el objetivo era ordenar bien el contenido, trabajar componentes reutilizables y evitar una interfaz recargada.",
+        "Lo construí para ordenar bien el contenido, con secciones reutilizables y una jerarquía visual clara, sin perder personalidad.",
       bullets: [
         "Implementado con Next.js App Router y TypeScript.",
-        "Contenido estructurado mediante objetos reutilizables y componentes por sección.",
-        "Construido como una experiencia responsive con motion refinado."
+        "Contenido estructurado con datos tipados y secciones reutilizables."
       ],
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       linkMode: "live-demo",
@@ -229,9 +247,9 @@ export const es: PortfolioContent = {
           items: [
             "Next.js App Router",
             "Modelo de contenido tipado y secciones reutilizables",
-            "Layout centrado en contenido con movimiento contenido"
+            "Layout centrado en contenido con movimiento visual discreto"
           ],
-          note: "Lo construí para que fuese legible, fácil de mantener y sencillo de ampliar."
+          note: "Lo construí para que fuera legible, fácil de mantener y sencillo de ampliar con el tiempo."
         },
         frames: [
           {
@@ -253,56 +271,56 @@ export const es: PortfolioContent = {
       ]
     },
     {
-      title: "DevConnect",
-      type: "Proyecto de fin de curso",
+      title: "Interactive JavaFX Fish Simulation",
+      type: "Proyecto técnico",
       description:
-        "Red social para el sector IT desarrollada como proyecto final de DAW, con publicaciones, comentarios, likes, perfiles de usuario y sistema de logros.",
+        "Simulación en JavaFX con ECS, generación procedural y comportamiento en tiempo real.",
       highlight:
-        "Además de la parte social, el proyecto me sirvió para trabajar separación cliente-servidor, autenticación y flujos reales de comunidad dentro de una aplicación web completa.",
+        "Es probablemente el proyecto que mejor refleja mi curiosidad intelectual, tanto por la parte visual como por la integración con una API de aleatoriedad cuántica.",
       bullets: [
-        "Desarrollo del frontend con Angular, TypeScript, RxJS e interceptors para gestionar flujos y comunicación con la API.",
-        "Construcción del backend con Laravel, incluyendo autenticación con Sanctum y cookies HTTP-only.",
-        "Arquitectura SPA con base de datos PostgreSQL.",
-        "Trabajo colaborativo con Git y GitHub siguiendo flujo de desarrollo en equipo."
+        "Arquitectura ECS para separar entidades, componentes y sistemas.",
+        "Integración de aleatoriedad cuántica real con la API de ANU QRNG."
       ],
-      tags: ["Angular", "RxJS", "Laravel", "PostgreSQL", "SPA"],
-      linkMode: "in-progress",
-      status: "Proyecto final DAW",
-      statusDetail: "Frontend disponible en GitHub",
+      tags: ["Java", "JavaFX", "Arquitectura ECS", "ANU QRNG"],
+      linkMode: "desktop-download",
+      status: "Release v0.1.2",
+      statusDetail: "Descarga de escritorio disponible",
       media: {
-        poster: "/assets/devconnect-login.png",
-        posterAlt: "Pantalla de inicio de DevConnect con hero, llamada a la acción y formulario de acceso.",
-        detailPanel: {
-          title: "Cliente y servidor",
-          items: [
-            "Angular, RxJS e interceptors",
-            "Laravel Sanctum y cookies HTTP-only",
-            "Perfiles, comunidad y gamificación"
-          ],
-          note: "Proyecto centrado en perfiles, comunidad e interacción dentro de una aplicación separada por capas."
-        },
+        poster: "/assets/fish-sim-thumb.jpg",
+        posterAlt: "Captura de la simulación en JavaFX con varios peces y burbujas.",
+        video: "/assets/fish-sim-preview.mp4",
+        badgeLabel: "Vista previa de la versión de escritorio",
         frames: [
           {
-            src: "/assets/devconnect-login.png",
-            alt: "Pantalla de inicio de sesión de DevConnect con hero y formulario de acceso.",
-            objectPosition: "center center",
-            label: "Hero y login"
+            src: "/assets/fish-sim-thumb.jpg",
+            alt: "Captura amplia de la simulación con peces distribuidos por el acuario.",
+            video: "/assets/fish-sim-entity-spread-2.mp4",
+            objectPosition: "center top",
+            label: "Distribución de entidades"
           },
           {
-            src: "/assets/devconnect-feed.png",
-            alt: "Feed principal de DevConnect con publicaciones y paneles laterales.",
-            objectPosition: "center top",
-            label: "Feed principal"
+            src: "/assets/fish-sim-thumb.jpg",
+            alt: "Grupos de peces en la zona media mostrando espaciado y movimiento.",
+            video: "/assets/fish-sim-entity-spread.mp4",
+            objectPosition: "center center",
+            label: "Campo de movimiento"
           }
         ]
       },
       actions: [
         {
           label: "GitHub",
-          href: "https://github.com/jesusdev98/DevConnect-Frontend",
+          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation",
           variant: "ghost",
           external: true,
           iconKey: "github"
+        },
+        {
+          label: "Descargar app",
+          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation/releases/tag/v0.1.2",
+          variant: "secondary",
+          external: true,
+          iconKey: "download"
         }
       ]
     }
@@ -314,11 +332,10 @@ export const es: PortfolioContent = {
       date: "Feb 2026 - May 2026",
       iconKey: "cpu",
       details:
-        "Trabajé en una plataforma SaaS multi-tenant para restauración, participando en frontend configurable, soporte multidioma, ajustes SEO y flujos de pedido.",
+        "Trabajé en una plataforma SaaS multi-tenant de restauración, contribuyendo a frontend configurable y flujos de producto.",
       bullets: [
-        "Desarrollo de funcionalidades para una plataforma SaaS multi-tenant del sector restauración.",
-        "Trabajo sobre branding, theming y arquitectura frontend configurable.",
-        "Implementación de soporte multidioma y configuración SEO.",
+        "Branding, theming y arquitectura frontend configurable.",
+        "Soporte multidioma y ajustes SEO.",
         "Colaboración en flujos de pedido y gestión."
       ]
     },
@@ -327,8 +344,7 @@ export const es: PortfolioContent = {
       place: "Instituto FOC",
       date: "2024 - 2026",
       iconKey: "code2",
-      details:
-        "Formación en programación, bases de datos, desarrollo backend, desarrollo frontend y despliegue de aplicaciones web."
+      details: "Formación técnica en desarrollo web, bases de datos, backend, frontend y despliegue."
     },
     {
       title: "Recepcionista",
@@ -336,23 +352,21 @@ export const es: PortfolioContent = {
       date: "2021 - 2025",
       iconKey: "briefcase",
       details:
-        "Cuatro años gestionando incidencias, coordinando con distintos departamentos y trabajando con autonomía en un entorno de atención al público."
+        "Cuatro años gestionando incidencias, coordinación y autonomía en atención al público."
     },
     {
       title: "Grado en Filosofía",
       place: "UNED",
       date: "2019 - 2023",
       iconKey: "network",
-      details:
-        "Enfoque en pensamiento crítico, lógica formal, argumentación y análisis de problemas complejos."
+      details: "Base sólida en pensamiento crítico, lógica formal y análisis de problemas complejos."
     },
     {
       title: "Certificaciones de Java",
       place: "Oracle Academy",
       date: "Formación adicional",
       iconKey: "code2",
-      details:
-        "Award of Course Completion in Java Fundamentals y Award of Achievement in Java Foundations."
+      details: "Java Fundamentals y Java Foundations completados en Oracle Academy."
     }
   ],
   contactLinks: [

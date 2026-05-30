@@ -12,14 +12,14 @@ export const en: PortfolioContent = {
   profile: {
     name: "Carol Vilar",
     legalName: "Carolina Vilar Rodenas",
-    role: "Junior Web Developer",
+    role: "Junior Full-Stack Developer",
     headline:
-      "I build web applications and like understanding how they work under the hood.",
-    stackLine: "Angular / Laravel / Java / SQL / REST APIs",
+      "I build full-stack web applications, with hands-on experience across frontend, APIs, and backend.",
+    stackLine: "Angular / Laravel / Java / Spring Boot / SQL / REST APIs",
     email: "carolvr8@gmail.com",
     github: "https://github.com/Akashae98",
     linkedin: "https://www.linkedin.com/in/carolina-vilar-rodenas-/",
-    cv: "/assets/CV-Carolina-Vilar-Rodenas.pdf"
+    cv: "/assets/Resume-Carolina-Vilar-Rodenas-EN.pdf"
   },
   navigation: [
     { label: "Profile", href: "#about" },
@@ -33,17 +33,17 @@ export const en: PortfolioContent = {
       label: "Web / SaaS / Product",
       rightLabel: "Interface, logic, data",
       viewProjectsLabel: "View Projects",
-      downloadCvLabel: "Download CV",
+      downloadCvLabel: "Download Resume",
       illustrationCaption: "Original illustration, reworked in 2026"
     },
     about: {
       label: "Profile",
-      title: "I like understanding how things work, not just using them.",
+      title: "I want to understand how things work, not just scratch the surface.",
       intro:
-        "I am comfortable moving between interface, logic, and data when a project needs it.",
+        "I move comfortably between interface, business logic, and data depending on what the project needs.",
       focusLabel: "Right now",
       focus:
-        "I am looking for a team where I can keep growing, contribute in a meaningful way, and learn from the people around me."
+        "Spring Boot, system design, and projects that make me think."
     },
     skills: {
       label: "Stack",
@@ -54,7 +54,7 @@ export const en: PortfolioContent = {
       label: "Projects",
       title: "Projects that best show how I work.",
       intro:
-        "This is where you can best see how I think, the kinds of problems I enjoy, and how I approach them."
+        "Three different projects that show how I think and how I build."
     },
     experience: {
       label: "Experience",
@@ -64,27 +64,27 @@ export const en: PortfolioContent = {
     },
     contact: {
       label: "Contact",
-      title: "Open to new opportunities.",
+      title: "If you think I could contribute, let's talk.",
       intro: "",
       body:
-        "I am interested in teams where I can understand the problem well, work on different parts of an application, and keep improving as a developer.",
+        "I am looking for a team where I can contribute from day one and learn from people who know more than I do.",
       footer: "Built with Next.js, TypeScript and Tailwind CSS.",
-      downloadCvLabel: "Download CV"
+      downloadCvLabel: "Download Resume"
     }
   },
   about: [
-    "I have worked on SaaS features and moved between frontend, backend, and data through internships, training, and personal projects. I like understanding what is actually going on before I touch code.",
-    "Philosophy has shaped how I work more than I expected: structuring problems well, communicating clearly, and not settling for the first solution that merely works."
+    "I have worked on SaaS features and touched frontend, backend, and data through internships, training, and personal projects. I like understanding the problem well before I start coding.",
+    "My background in philosophy has reinforced a way of working that translates well into development: structuring problems clearly, communicating well, and not stopping at the first solution that happens to work."
   ],
   currentLearning: {
     title: "Currently Learning",
-    text: "Right now I'm going deeper into Java, Spring Boot, and system design without losing sight of how they fit with frontend work in a complete application."
+    text: "Right now I'm going deeper into Java, Spring Boot, and system design to strengthen the backend side of my full-stack profile."
   },
   developerSignals: {
     label: "Current Focus",
-    title: "The direction I want to keep growing in",
+    title: "Where I want to keep growing",
     intro:
-      "Right now I'm going deeper into Java and Spring Boot, with the goal of building more solid end-to-end web applications.",
+      "I am steering my growth toward stronger end-to-end web applications, with more depth in backend and architecture.",
     focusPanel: {
       items: [
         "Spring Boot and Java",
@@ -96,7 +96,7 @@ export const en: PortfolioContent = {
       label: "Featured project",
       title: "JavaFX Fish Simulation",
       text:
-        "Technical project focused on procedural simulation, ECS architecture, and real-time behavior."
+        "Combines ECS architecture, real-time simulation, and quantum randomness through the ANU QRNG API."
     }
   },
   skillGroups: [

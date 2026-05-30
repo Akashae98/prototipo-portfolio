@@ -12,10 +12,10 @@ export const es: PortfolioContent = {
   profile: {
     name: "Carol Vilar",
     legalName: "Carolina Vilar Rodenas",
-    role: "Desarrolladora web junior",
+    role: "Desarrolladora full-stack junior",
     headline:
-      "Desarrollo aplicaciones web y me gusta entender bien cómo funcionan por dentro.",
-    stackLine: "Angular / Laravel / Java / SQL / APIs REST",
+      "Desarrollo aplicaciones web full-stack, con experiencia práctica en frontend, APIs y backend.",
+    stackLine: "Angular / Laravel / Java / Spring Boot / SQL / APIs REST",
     email: "carolvr8@gmail.com",
     github: "https://github.com/Akashae98",
     linkedin: "https://www.linkedin.com/in/carolina-vilar-rodenas-/",
@@ -38,12 +38,12 @@ export const es: PortfolioContent = {
     },
     about: {
       label: "Perfil",
-      title: "Me gusta entender cómo funcionan las cosas, no solo usarlas.",
+      title: "Me interesa entender cómo funcionan las cosas, no solo quedarme en la superficie.",
       intro:
-        "Me manejo bien entre interfaz, lógica y datos cuando el proyecto lo necesita.",
+        "Me muevo bien entre interfaz, lógica de negocio y datos según lo que pida el proyecto.",
       focusLabel: "Ahora mismo",
       focus:
-        "Busco un equipo donde seguir creciendo como desarrolladora y aprender de la gente que me rodea."
+        "Spring Boot, diseño de sistemas y proyectos que me obliguen a pensar."
     },
     skills: {
       label: "Tecnologías",
@@ -54,7 +54,7 @@ export const es: PortfolioContent = {
       label: "Proyectos",
       title: "Proyectos que muestran cómo trabajo.",
       intro:
-        "Aquí es donde mejor se ve cómo trabajo, qué me interesa construir y cómo afronto los problemas."
+        "Tres proyectos distintos que muestran cómo pienso y cómo construyo."
     },
     experience: {
       label: "Experiencia",
@@ -64,27 +64,27 @@ export const es: PortfolioContent = {
     },
     contact: {
       label: "Contacto",
-      title: "Abierta a nuevas oportunidades.",
+      title: "Si crees que podría aportar, hablemos.",
       intro: "",
       body:
-        "Me interesan los equipos donde pueda entender bien el problema, tocar varias partes de una aplicación y seguir mejorando como desarrolladora.",
+        "Busco un equipo donde pueda aportar desde el primer día y aprender de gente que sabe más que yo.",
       footer: "Hecho con Next.js, TypeScript y Tailwind CSS.",
       downloadCvLabel: "Descargar CV"
     }
   },
   about: [
-    "He trabajado en producto SaaS y me he movido entre frontend, backend y datos en prácticas, formación y proyectos propios. Me gusta entender bien qué está pasando antes de tocar código.",
+    "He trabajado en producto SaaS y he tocado frontend, backend y datos en prácticas, formación y proyectos propios. Antes de programar, me gusta entender bien el problema.",
     "La filosofía ha marcado bastante mi forma de trabajar: pensar con orden, comunicar con claridad y entender bien el problema antes de intentar resolverlo."
   ],
   currentLearning: {
     title: "Aprendiendo ahora",
-    text: "Ahora estoy profundizando en Java, Spring Boot y diseño de sistemas, sin perder de vista cómo encajan con el frontend en una aplicación completa."
+    text: "Ahora estoy profundizando en Java, Spring Boot y diseño de sistemas para reforzar mi perfil full-stack desde la parte backend."
   },
   developerSignals: {
     label: "Foco Actual",
-    title: "Hacia donde voy ahora.",
+    title: "Hacia dónde quiero seguir creciendo.",
     intro:
-      "Ahora mismo estoy profundizando en Java y Spring Boot, con la idea de seguir construyendo aplicaciones web sólidas.",
+      "Estoy orientando mi crecimiento hacia aplicaciones web más sólidas de extremo a extremo, con más profundidad en backend y arquitectura.",
     focusPanel: {
       items: [
         "Spring Boot y Java",
@@ -96,7 +96,7 @@ export const es: PortfolioContent = {
       label: "Proyecto destacado",
       title: "JavaFX Fish Simulation",
       text:
-        "Proyecto técnico sobre simulación procedural, ECS y comportamiento en tiempo real."
+        "Combina arquitectura ECS, simulación en tiempo real y aleatoriedad cuántica vía ANU QRNG."
     }
   },
   skillGroups: [

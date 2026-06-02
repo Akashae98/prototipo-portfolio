@@ -2,9 +2,9 @@ import type { PortfolioContent } from "@/data/profile";
 
 export const es: PortfolioContent = {
   metadata: {
-    title: "Carol Vilar | Desarrolladora web junior",
+    title: "Carol Vilar | Desarrolladora full-stack",
     description:
-      "Portfolio de Carol Vilar, desarrolladora web junior con experiencia práctica en frontend, backend y producto digital."
+      "Portfolio de Carol Vilar, desarrolladora full-stack recién titulada en DAW con experiencia en frontend, backend y producto digital."
   },
   ui: {
     localeSwitcherLabel: "Selector de idioma"
@@ -12,9 +12,9 @@ export const es: PortfolioContent = {
   profile: {
     name: "Carol Vilar",
     legalName: "Carolina Vilar Rodenas",
-    role: "Desarrolladora full-stack junior",
+    role: "Desarrolladora full-stack",
     headline:
-      "Desarrollo aplicaciones web full-stack, con experiencia práctica en frontend, APIs y backend.",
+      "Desarrollo aplicaciones web full-stack, con experiencia en frontend, backend y APIs.",
     stackLine: "Angular / Laravel / Java / Spring Boot / SQL / APIs REST",
     email: "carolvr8@gmail.com",
     github: "https://github.com/Akashae98",
@@ -43,7 +43,7 @@ export const es: PortfolioContent = {
         "Me muevo bien entre interfaz, lógica de negocio y datos según lo que pida el proyecto.",
       focusLabel: "Ahora mismo",
       focus:
-        "Spring Boot, diseño de sistemas y proyectos que me obliguen a pensar."
+        "Busco proyectos donde pueda entender bien el problema y construir soluciones sólidas."
     },
     skills: {
       label: "Tecnologías",
@@ -64,16 +64,16 @@ export const es: PortfolioContent = {
     },
     contact: {
       label: "Contacto",
-      title: "Si crees que podría aportar, hablemos.",
+      title: "Abierta a nuevas oportunidades.",
       intro: "",
       body:
-        "Busco un equipo donde pueda aportar desde el primer día y aprender de gente que sabe más que yo.",
+        "Me interesan los equipos donde pueda entender bien el problema, tocar varias partes de una aplicación y seguir mejorando como desarrolladora.",
       footer: "Hecho con Next.js, TypeScript y Tailwind CSS.",
       downloadCvLabel: "Descargar CV"
     }
   },
   about: [
-    "He trabajado en producto SaaS y he tocado frontend, backend y datos en prácticas, formación y proyectos propios. Antes de programar, me gusta entender bien el problema.",
+    "He trabajado en producto SaaS y me he movido entre frontend, backend y datos en experiencia real, formación y proyectos propios. Me gusta entender bien qué está pasando antes de tocar código.",
     "La filosofía ha marcado bastante mi forma de trabajar: pensar con orden, comunicar con claridad y entender bien el problema antes de intentar resolverlo."
   ],
   currentLearning: {
@@ -84,7 +84,7 @@ export const es: PortfolioContent = {
     label: "Foco Actual",
     title: "Hacia dónde quiero seguir creciendo.",
     intro:
-      "Estoy orientando mi crecimiento hacia aplicaciones web más sólidas de extremo a extremo, con más profundidad en backend y arquitectura.",
+      "Ahora mismo estoy profundizando en Java y Spring Boot, con la idea de seguir construyendo aplicaciones web sólidas.",
     focusPanel: {
       items: [
         "Spring Boot y Java",
@@ -170,7 +170,7 @@ export const es: PortfolioContent = {
       description:
         "Red social tech desarrollada como proyecto final, con frontend Angular y backend Laravel por capas.",
       highlight:
-        "Es el proyecto que mejor resume cómo trabajo en web.",
+        "Proyecto colaborativo donde trabajé una aplicación web completa, coordinando frontend, backend y flujos reales de producto.",
       bullets: [
         "Frontend en Angular, TypeScript y RxJS con interceptors.",
         "Backend en Laravel con Sanctum y cookies HTTP-only.",
@@ -225,6 +225,60 @@ export const es: PortfolioContent = {
       ]
     },
     {
+      title: "Interactive JavaFX Fish Simulation",
+      type: "Proyecto técnico",
+      description:
+        "Simulación en JavaFX con ECS, generación procedural y comportamiento en tiempo real.",
+      highlight:
+        "En esta simulación utilizo aleatoriedad cuántica real para dar vida a los peces, con gráficos propios y variaciones en color, tamaño y apariencia visual.",
+      bullets: [
+        "Arquitectura ECS e inyección de dependencias para organizar entidades, componentes y sistemas.",
+        "Gráficos ilustrados por mí e integración de aleatoriedad cuántica real con la API de ANU QRNG."
+      ],
+      tags: ["Java", "JavaFX", "Arquitectura ECS", "ANU QRNG"],
+      linkMode: "desktop-download",
+      status: "Release v0.1.2",
+      statusDetail: "Descarga de escritorio disponible",
+      media: {
+        poster: "/assets/fish-sim-thumb.jpg",
+        posterAlt: "Captura de la simulación en JavaFX con varios peces y burbujas.",
+        video: "/assets/fish-sim-preview.mp4",
+        badgeLabel: "Vista previa de la versión de escritorio",
+        frames: [
+          {
+            src: "/assets/fish-sim-thumb.jpg",
+            alt: "Captura amplia de la simulación con peces distribuidos por el acuario.",
+            video: "/assets/fish-sim-entity-spread-2.mp4",
+            objectPosition: "center top",
+            label: "Distribución de entidades"
+          },
+          {
+            src: "/assets/fish-sim-thumb.jpg",
+            alt: "Grupos de peces en la zona media mostrando espaciado y movimiento.",
+            video: "/assets/fish-sim-entity-spread.mp4",
+            objectPosition: "center center",
+            label: "Campo de movimiento"
+          }
+        ]
+      },
+      actions: [
+        {
+          label: "GitHub",
+          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation",
+          variant: "ghost",
+          external: true,
+          iconKey: "github"
+        },
+        {
+          label: "Descargar app",
+          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation/releases/tag/v0.1.2",
+          variant: "secondary",
+          external: true,
+          iconKey: "download"
+        }
+      ]
+    },
+    {
       title: "Portfolio personal",
       type: "Proyecto web",
       description:
@@ -269,74 +323,20 @@ export const es: PortfolioContent = {
           iconKey: "github"
         }
       ]
-    },
-    {
-      title: "Interactive JavaFX Fish Simulation",
-      type: "Proyecto técnico",
-      description:
-        "Simulación en JavaFX con ECS, generación procedural y comportamiento en tiempo real.",
-      highlight:
-        "Es probablemente el proyecto que mejor refleja mi curiosidad intelectual, tanto por la parte visual como por la integración con una API de aleatoriedad cuántica.",
-      bullets: [
-        "Arquitectura ECS para separar entidades, componentes y sistemas.",
-        "Integración de aleatoriedad cuántica real con la API de ANU QRNG."
-      ],
-      tags: ["Java", "JavaFX", "Arquitectura ECS", "ANU QRNG"],
-      linkMode: "desktop-download",
-      status: "Release v0.1.2",
-      statusDetail: "Descarga de escritorio disponible",
-      media: {
-        poster: "/assets/fish-sim-thumb.jpg",
-        posterAlt: "Captura de la simulación en JavaFX con varios peces y burbujas.",
-        video: "/assets/fish-sim-preview.mp4",
-        badgeLabel: "Vista previa de la versión de escritorio",
-        frames: [
-          {
-            src: "/assets/fish-sim-thumb.jpg",
-            alt: "Captura amplia de la simulación con peces distribuidos por el acuario.",
-            video: "/assets/fish-sim-entity-spread-2.mp4",
-            objectPosition: "center top",
-            label: "Distribución de entidades"
-          },
-          {
-            src: "/assets/fish-sim-thumb.jpg",
-            alt: "Grupos de peces en la zona media mostrando espaciado y movimiento.",
-            video: "/assets/fish-sim-entity-spread.mp4",
-            objectPosition: "center center",
-            label: "Campo de movimiento"
-          }
-        ]
-      },
-      actions: [
-        {
-          label: "GitHub",
-          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation",
-          variant: "ghost",
-          external: true,
-          iconKey: "github"
-        },
-        {
-          label: "Descargar app",
-          href: "https://github.com/Akashae98/JavaFX-Fish-Simulation/releases/tag/v0.1.2",
-          variant: "secondary",
-          external: true,
-          iconKey: "download"
-        }
-      ]
     }
   ],
   timeline: [
     {
-      title: "Desarrolladora en prácticas",
+      title: "Desarrolladora full-stack",
       place: "Sinqro",
       date: "Feb 2026 - May 2026",
       iconKey: "cpu",
       details:
-        "Trabajé en una plataforma SaaS multi-tenant de restauración, contribuyendo a frontend configurable y flujos de producto.",
+        "Desarrollé una plataforma SaaS multi-tenant de restauración, con storefront por cliente, pedidos online y renderizado SSR en Next.js.",
       bullets: [
-        "Branding, theming y arquitectura frontend configurable.",
-        "Soporte multidioma y ajustes SEO.",
-        "Colaboración en flujos de pedido y gestión."
+        "Implementación de configuración por tenant: dominio, branding, themes, SEO y multilenguaje.",
+        "Implementación y consumo de APIs REST para catálogo, checkout, tracking de pedidos y pagos.",
+        "Optimización de la experiencia de compra y de los flujos de producto en un entorno multi-tenant."
       ]
     },
     {

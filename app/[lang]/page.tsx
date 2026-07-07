@@ -10,19 +10,23 @@ import { Skills } from "@/components/sections/Skills";
 import { getPortfolioContent, isLocale, type Locale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 
+// The Home component is the main entry point for the portfolio page, which renders various sections based on the provided language parameter.
 export default function Home({
   params
 }: {
   params: { lang: string };
 }) {
+  // Check if the provided language parameter is a valid locale. If not, return a 404 Not Found response.
   if (!isLocale(params.lang)) {
     notFound();
   }
-
+// Cast the language parameter to the Locale type for further processing.
   const lang = params.lang as Locale;
+  // Retrieve the portfolio content based on the specified language.
   const content = getPortfolioContent(lang);
 
   return (
+    // The main container for the portfolio page, with components and styling for layout and background.
     <main className="relative min-h-screen overflow-x-hidden bg-void text-bone">
       <QuantumAquarium />
       <div className="site-shell">

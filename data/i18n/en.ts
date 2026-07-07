@@ -82,14 +82,14 @@ export const en: PortfolioContent = {
   },
   developerSignals: {
     label: "Current Focus",
-    title: "Where I want to keep growing",
+    title: "What I'm focusing on now",
     intro:
-      "Right now I'm going deeper into Java and Spring Boot, with the goal of continuing to build solid web applications.",
+      "I'm currently focusing on software architecture while working with Next.js and Spring Boot, with the goal of building more robust and scalable applications.",
     focusPanel: {
       items: [
-        "Spring Boot and Java",
-        "Angular + RxJS",
-        "Personal full-stack projects"
+        "Software architecture",
+        "Next.js",
+        "Spring Boot"
       ]
     },
     highlight: {

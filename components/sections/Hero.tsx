@@ -17,10 +17,14 @@ type HeroProps = {
   heroCopy: PortfolioContent["sectionCopy"]["hero"];
 };
 
+// The Hero component renders the hero section of the portfolio page, which includes 
+// the user's name, role, headline, stack line, and links to projects and CV. It also features an 
+// interactive illustration with motion effects based on pointer movement.
 export function Hero({ profile, heroCopy }: HeroProps) {
   const reducedMotion = useReducedMotion();
   const [isPointerDevice, setIsPointerDevice] = useState(false);
 
+  // Motion values for rotation, shift, and glow position based on pointer movement.
   const rawRotateX = useMotionValue(0);
   const rawRotateY = useMotionValue(0);
   const rawShiftX = useMotionValue(0);
@@ -28,12 +32,14 @@ export function Hero({ profile, heroCopy }: HeroProps) {
   const glowX = useMotionValue(50);
   const glowY = useMotionValue(42);
 
+  // The useSpring hook is used to create smooth spring animations for the rotation and shift values,
   const rotateX = useSpring(rawRotateX, { stiffness: 132, damping: 20, mass: 0.68 });
   const rotateY = useSpring(rawRotateY, { stiffness: 132, damping: 20, mass: 0.68 });
   const shiftX = useSpring(rawShiftX, { stiffness: 112, damping: 22, mass: 0.78 });
   const shiftY = useSpring(rawShiftY, { stiffness: 112, damping: 22, mass: 0.78 });
   const reactiveLight = useMotionTemplate`radial-gradient(circle at ${glowX}% ${glowY}%, rgba(216, 180, 254, 0.11), rgba(96, 165, 250, 0.05) 26%, transparent 56%)`;
 
+  // The useEffect hook is used to detect if the user's device supports pointer input (e.g., mouse or touch) and updates the isPointerDevice state accordingly. It also listens for changes in the media query to update the state when the device capabilities change.
   useEffect(() => {
     const media = window.matchMedia("(hover: hover) and (pointer: fine)");
     const update = () => setIsPointerDevice(media.matches && !reducedMotion);

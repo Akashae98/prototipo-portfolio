@@ -1,3 +1,9 @@
+// The following TypeScript types define the structure of the portfolio content, 
+// including projects, skills, timeline events, and contact links. 
+
+// These types are used to ensure type safety and consistency when working with the portfolio 
+// data throughout the application.
+
 export type ProjectActionVariant = "primary" | "secondary" | "ghost";
 
 export type ProjectActionIconKey = "github" | "download" | "external";

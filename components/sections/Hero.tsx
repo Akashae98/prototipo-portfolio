@@ -188,7 +188,7 @@ export function Hero({ profile, heroCopy }: HeroProps) {
                 priority
                 quality={100}
                 sizes="(min-width: 768px) 580px, calc(100vw - 44px)"
-                src="/assets/hero-carolina.png"
+                src="/assets/hero-carolina-outfit.png"
                 alt="Original illustration by Carol Vilar integrated into the portfolio hero"
                 width={1305}
                 height={1205}
